@@ -104,12 +104,7 @@ gplayer/taunt	WPTAUNT
 
 /* ********************************************************************************** */
 
-$Random Grondoval/Secret { WITCH_SECRET1 WITCH_SECRET2 WITCH_SECRET3 WITCH_SECRET4 WITCH_SECRET5 }
-WITCH_SECRET1		Sounds/Witchaven/others/WITCH_SECRET1
-WITCH_SECRET2		Sounds/Witchaven/others/WITCH_SECRET2
-WITCH_SECRET3		Sounds/Witchaven/others/WITCH_SECRET3
-WITCH_SECRET4		Sounds/Witchaven/others/WITCH_SECRET4
-WITCH_SECRET5		Sounds/Witchaven/others/WITCH_SECRET5
+Grondoval/Secret		    SEC-WTCH
 
 DarkSideAI/Grondoval/Taunt	WPTAUNT
 DarkSideAI/Grondoval/Pain	WPNOPE1

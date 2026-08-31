@@ -12,8 +12,7 @@ halflife/weaponmove		"Sounds/HalfLife/Weapons/wpn_moveselect.wav"
 HW00CAS0 HW00CAS0
 HW00CAS1 HW00CAS1
 HW00CAS2 HW00CAS2
-HW00CAS3 HW00CAS3
-$random halflife/brass_shell { HW00CAS0 HW00CAS1 HW00CAS2 HW00CAS3 }
+$random halflife/brass_shell { HW00CAS0 HW00CAS1 HW00CAS2 }
 
 HW00RIC0 HW00RIC0
 HW00RIC1 HW00RIC1
