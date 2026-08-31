@@ -12,6 +12,7 @@ Duke Nukem 3D:
 
 Corridor 7:
 -Secret sounds changed to original game's menu select sound.
+-Added a unique message for finding a secret.
 
 Witchaven:
 -Class now uses non-upscaled sound effects.
@@ -19,6 +20,11 @@ Witchaven:
 
 Half-Life:
 -Fixed spent 9mm casings incorrectly making Shadow Warrior sounds.
+
+Shadow Warrior:
+-The guardian head's viewbobbing has been tweaked.
+-Secret sounds changed to ripper heart sound from the prototypes.
+-The uzi is now animated in TEXTURES.
 
 PowerSlave/Exhumed:
 -Class now uses non-upscaled sound effects.

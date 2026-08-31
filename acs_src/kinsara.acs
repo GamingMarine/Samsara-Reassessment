@@ -215,7 +215,7 @@ script "SecretNotifierDisplay" (int sfound, int stotal) CLIENTSIDE
         Log(l:"SECRETFOUND_DEFAULT");
     } else if (CheckInventory("C7Class")) {
         AmbientSound("C7/Secret", 127);
-        Log(l:"SECRETFOUND_DEFAULT");
+        Log(l:"SECRETFOUND_CORRIDOR7");
     } else if (CheckInventory("RMRClass")) {
         AmbientSound("RMR/Secret", 127);
         Log(l:"SECRETFOUND_DEFAULT");

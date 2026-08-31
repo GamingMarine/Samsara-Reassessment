@@ -19,11 +19,11 @@ SPHOYA06 SPHOYA06
 $random sw/yell { SPHOYA00 SPHOYA01 SPHOYA02 /*SPHOYA03*/ SPHOYA04 SPHOYA05 SPHOYA06 }
 $random sw/yell2 { SPHOYA04 SPHOYA05 SPHOYA06 }
 
-TSTICK1 TSTICK1
-TSTICK2 TSTICK2
-TSTICK3 TSTICK3
-TSTICK4 TSTICK4
-$random  LoWang/StickyTaunt { TSTICK1 TSTICK2 TSTICK3 TSTICK4 }
+SW/StickyTaunt1         SWSTICK1
+SW/StickyTaunt2         SWSTICK2
+SW/StickyTaunt3         SWSTICK3
+SW/StickyTaunt4         SWSTICK4
+$random  LoWang/StickyTaunt { SW/StickyTaunt1 SW/StickyTaunt2 SW/StickyTaunt3 SW/StickyTaunt4 }
 
 // * Fist
 sw/fists_wall 	SWF0WALL
@@ -37,12 +37,13 @@ sw/katana_wall	SWF1WALL
 sw/katana_flesh	SWF1FLSH
 sw/katana_slash SW_KSLSH
 
-LoWang/Haha				SPTNT50
-LoWang/LikeShuriken 	SPWEAP00
-LoWang/LikeSword		SPWEAP01
+LoWang/Haha				SWLAUGH
+LoWang/LikeShuriken 	SWLIKSHU
+LoWang/ComeGetSome      SWSWORD1
+LoWang/LikeSword1		SWSWORD2
 NULL NULL
 $Random LoWang/Fist { SPHOYA05  SPHOYA06 }
-$Random LoWang/Sword { LoWang/Haha LoWang/LikeSword }
+$Random LoWang/Sword { LoWang/Haha LoWang/ComeGetSome LoWang/LikeSword }
 $Random LoWang/Shuriken { LoWang/LikeShuriken }
 
 // * Shuriken
@@ -121,13 +122,10 @@ wang/twowangs	  			SWHEARTW
 SW/DarkNinja/FlashBomb		Sounds/SW/SWGASPOP.WAV
 GasBomb/Loop				SW_HISS1
 
-SPKILL0		SPKILL0
 SW/Drown1	SPKILL1
 SW/Drown2	SPKILL2
 
 $Random SW/Drown { SW/Drown1 SW/Drown2 }
-
-SW/Land		SPLAND0
 
 GRUNT06 GRUNT06
 GRUNT07 GRUNT07
@@ -171,18 +169,19 @@ $Random LoWang/Taunt { LoWang/BossW SW/KillTauntF OlWang/BossB LoWang/BossV SW/T
 					   SW/Taunt16 SW/Taunt15 SW/Taunt14 SW/Taunt13 SW/Taunt1 SW/Taunt2 SW/Taunt3 SW/Taunt4 SW/Taunt25 SW/Taunt28 SW/Taunt31	SW/Taunt33
 					   SW/Taunt5 SW/Taunt6 SW/Taunt7 SW/Taunt8 SW/Taunt9 SW/Taunt11 SW/Taunt12 SW/Taunt18 SW/Taunt21 SW/Taunt22 SW/Taunt24 SW/Taunt32 SW/Taunt44 }
 
-SWPAIN1 SWPAIN07
-SWPAIN2 SWPAIN22
-SWPAIN3 SWPAIN03
-SWPAIN4 SWPAIN05
-$random  SWPAIN100 { SWPAIN1  SWPAIN2  SWPAIN3 SWPAIN4 }
-SWYELL1 SWYELL1
-SWYELL2 SWYELL2
-SWYELL3 SWYELL3
-$random  SWPAIN50 { SWYELL1  SWYELL2 SWYELL3 }
-SWYELL4 SWYELL4
-SWYELL5 SWYELL5
-$random  SWPAIN25 { SWYELL1  SWYELL2 SWYELL3 SWYELL4  SWYELL5 }
+SW/MinorHurt1       SWHURT1
+SW/MinorHurt2       SWHURT2
+SW/MinorHurt3       SWHURT3
+SW/MinorHurt4       SWHURT4
+$random SWPAIN100 { SW/MinorHurt1 SW/MinorHurt2 SW/MinorHurt3 SW/MinorHurt4 }
+SW/MajorHurt1       SWSCREM1
+SW/MajorHurt2       SWSCREM2
+SW/MajorHurt3       SWSCREM4
+$random  SWPAIN50 { SW/MajorHurt1 SW/MajorHurt2 SW/MajorHurt3 }
+SW/DyingHurt1       SWSCREM3
+SW/DyingHurt2       SWSCREM5
+SW/DyingHurt3       SWSCREM6
+$random  SWPAIN25 { SW/DyingHurt1 SW/DyingHurt2 SW/DyingHurt3 }
 SWPAIN8 SPOUCH1
 SWPAIN6 SPOUCH3
 SWPAIN7 SPOUCH5
@@ -193,111 +192,90 @@ $playersounddup	LoWang	 male	*xdeath			*death
 $playersounddup	LoWang	 male	*crazydeath		*death
 $playersounddup LoWang	 male   *wimpydeath 	*death
 $playeralias	LoWang	 male	*gibbed			sw/gib_start
-$playersound	LoWang	 male	*falling		SPKILL0
-$playersound	LoWang	 male	*burndeath		SPKILL0
+$playersound	LoWang	 male	*falling		SWFALL
+$playersound	LoWang	 male	*burndeath		SWFALL
 $playeralias	LoWang	 male	*pain100		SWPAIN100
 $playeralias	LoWang	 male	*pain75			SWPAIN100
 $playeralias	LoWang	 male	*pain50			SWPAIN50
 $playeralias	LoWang	 male	*pain25			SWPAIN25
-$playeralias	LoWang	 male	*land			SW/Land
+$playersound	LoWang	 male	*land			SPLAND0
 $playeralias	LoWang	 male	*usefail		SW/PUSH
 $playersound	LoWang	 male	*puzzfail		GRUNT06
-$playersound	LoWang	 male	*grunt			GRUNT06
+$playeralias	LoWang	 male	*grunt			SW/MinorHurt2
 $playeralias	LoWang	 male	*taunt			LoWang/Taunt
 $playeralias   	LoWang   male   *drown          SW/Drown
 $Playeralias	LoWang	 male   *surface		LoWang/Surface
-$playersound    LoWang   male   *poison     	SPOUCH4
+$playersound    LoWang   male   *poison     	SWPOISON
 
 LoWang/Surface	SPHEAL2
 
-SPOUCH4			SPOUCH4
+SW/KillTaunt1	SWKILL01
+SW/KillTaunt2	SWKILL02
+SW/KillTaunt3	SWKILL03
+SW/KillTaunt4	SWKILL04
+SW/KillTaunt5	SWKILL05
+SW/KillTaunt6	SWKILL06
+SW/KillTaunt7	SWKILL07
+SW/KillTaunt8	SWKILL08
+SW/KillTaunt9	SWKILL09
+SW/KillTaunt10	SWKILL10
+SW/KillTaunt11	SWKILL11
+SW/KillTaunt12	SWKILL12
+SW/KillTaunt13	SWKILL13
+SW/KillTaunt14	SWKILL14
+SW/KillTaunt15	SWKILL15
+SW/KillTaunt16	SWKILL16
+SW/KillTaunt17	SWKILL17
+SW/KillTaunt18	SWKILL18
+SW/KillTaunt19	SWKILL19
+SW/KillTaunt20	SWKILL20
+SW/KillTaunt21	SWKILL21
+SW/KillTaunt22	SWKILL22
+SW/KillTaunt23	SWKILL23
+SW/KillTaunt24	SWKILL24
+SW/KillTaunt25	SWKILL25
+SW/KillTaunt26	SWKILL26
+SW/KillTaunt27	SWKILL27
+SW/KillTaunt28	SWKILL28
+SW/KillTaunt29  SWKILL29
+SW/KillTaunt30	SWKILL30
+$Random LoWang/TauntKill { SW/KillTaunt1 SW/KillTaunt2 SW/KillTaunt3 SW/KillTaunt4 SW/KillTaunt5 SW/KillTaunt6 SW/KillTaunt7 SW/KillTaunt8 SW/KillTaunt9 SW/KillTaunt10 SW/KillTaunt11 SW/KillTaunt12 SW/KillTaunt13 SW/KillTaunt14 SW/KillTaunt15 SW/KillTaunt16 SW/KillTaunt17 SW/KillTaunt18 SW/KillTaunt19 SW/KillTaunt20 SW/KillTaunt21 SW/KillTaunt22 SW/KillTaunt23 SW/KillTaunt24 SW/KillTaunt25 SW/KillTaunt26 SW/KillTaunt27 SW/KillTaunt28 SW/KillTaunt29 SW/KillTaunt30 }
 
-SW/KillTaunt1	SPTNT19
-SW/KillTaunt2	SPTNT24
-SW/KillTaunt3	SPTNT21
-SW/KillTaunt4	SPTNT25
-SW/KillTaunt5	SPTNT26
-SW/KillTaunt6	SPTNT28
-SW/KillTaunt7	SPTNT46
-SW/KillTaunt8	SPTNT47
-SW/KillTaunt9	SPTNT07
-SW/KillTauntA	SPTNT42
-SW/KillTauntB	SPTNT51
-SW/KillTauntC	SPTNT17
-SW/KillTauntD	SPTNT40
-SW/KillTauntE	SPWAIT20
-SW/KillTauntF	SPWAIT26
-SW/LoWangKT01	JG1087
-SW/LoWangKT02	JG2075
-SW/LoWangKT03	BABOON03
-SW/LoWangKT04	JG45067
-SW/LoWangKT05	JG440252
-SW/LoWangKT06	JG41028
-SW/LoWangKT07	JG410282
-SW/LoWangKT08	JG42033
-$Random LoWang/TauntKill { SW/KillTaunt8 SW/KillTauntF SW/KillTauntE SW/KillTauntD SW/KillTauntC SW/Intro7 SW/Intro5 SW/Intro4 SW/KillTaunt1 SW/KillTaunt2 SW/KillTaunt3 SW/KillTaunt4
-						   SW/KillTaunt5 SW/KillTaunt6 SW/KillTaunt7 SW/KillTaunt9 SW/KillTauntA LoWang/Haha SW/Taunt19 SW/LoWangKT01 SW/LoWangKT02 SW/LoWangKT03 SW/LoWangKT04 SW/LoWangKT05 SW/LoWangKT06 SW/LoWangKT07 }
+SW/GibTaunt1	SWGIBD01
+SW/GibTaunt2	SWGIBD02
+SW/GibTaunt3	SWGIBD03
+SW/GibTaunt4	SWGIBD04
+SW/GibTaunt5	SWGIBD05
+SW/GibTaunt6	SWGIBD06
+SW/GibTaunt7    SWGIBD07
+SW/GibTaunt8	SWGIBD08
+SW/GibTaunt9	SWGIBD09
+SW/GibTaunt10	SWGIBD10
+SW/GibTaunt11	SWGIBD11
+SW/GibTaunt12	SWGIBD12
+SW/GibTaunt13	SWGIBD13
+SW/GibTaunt14	SWGIBD14
+SW/GibTaunt15	SWGIBD15
+SW/GibTaunt16	SWGIBD16
+SW/GibTaunt17	SWGIBD17
+SW/GibTaunt18	SWGIBD18
+$Random	LoWang/TauntGib { SW/GibTaunt1 SW/GibTaunt2 SW/GibTaunt3 SW/GibTaunt4 SW/GibTaunt5 SW/GibTaunt6 SW/GibTaunt7 SW/GibTaunt8 SW/GibTaunt9 SW/GibTaunt10 SW/GibTaunt11 SW/GibTaunt12 SW/GibTaunt13 SW/GibTaunt14 SW/GibTaunt15 SW/GibTaunt16 SW/GibTaunt17 SW/GibTaunt18 }
 
-SW/SwrdKill1	SPWEAP08
-SW/SwrdKill2	SPWEAP05
-SW/SwrdKill3	SPWEAP04
-SW/SwrdKill4	SPWAIT25
-
-$Random LoWang/SwordKill { SW/SwrdKill1 SW/SwrdKill2 SW/SwrdKill3 SW/SwrdKill4 }
-
-SW/GibTaunt1	SPTNT15
-SW/GibTaunt2	SPTNT18
-SW/GibTaunt3	SPTNT22
-SW/GibTaunt4	SPTNT27
-SW/GibTaunt5	SPTNT33
-SW/GibTaunt6	SPTNT42
-SW/GibTaunt8	SPTNT45
-SW/GibTaunt9	SPTNT48
-SW/GibTauntB	SPWAIT29
-SW/GibTauntA	SPTNT11
-SW/GibTauntC	SPTNT35
-SW/GibTauntD	SPTNT38
-SW/GibTauntE	SPTNT39
-SW/GibTauntF	SPWAIT09
-SW/GibTauntG	SPWAIT13
-SW/GibTauntH	SPWAIT16
-SW/GibTauntI	SPWAIT15
-SW/GibTauntJ	SPWAIT18
-SW/GibTauntK	SPWAIT19
-SW/GibTauntL	SPTNT54
-SW/GibTauntM	SPTNT55
-SW/GibTauntN	SPTNT56
-SW/GibTauntO	JG44053
-SW/GibTauntP	JG44054
-$Random	LoWang/TauntGib { SW/GibTauntM LoWang/BossA SW/GibTauntN SW/GibTauntL SW/GibTauntJ SW/GibTauntI SW/GibTauntH SW/GibTauntG SW/GibTauntE SW/Taunt10 SW/GibTauntD SW/IntroD SW/GibTauntC SW/LoWangKT08 SW/GibTauntO
-						  SW/GibTauntA SW/GibTaunt1 SW/GibTaunt2 SW/GibTaunt3 SW/GibTaunt4 SW/GibTaunt5 SW/GibTaunt6 SW/KillTaunt8 SW/GibTaunt8 SW/GibTaunt9 SW/GibTauntB SW/KillTauntB SW/IntroF LoWang/TauntKill SW/GibTauntP }
-
-SW/Intro1		SPTNT01
-SW/Intro2		SPTNT03
-SW/Intro4		SPTNT09
-SW/Intro5		SPTNT10
-SW/Intro6		SPTNT14
-SW/Intro7		SPTNT23
-SW/Intro8		SPWAIT06
-SW/Intro9		SPTNT28
-SW/IntroA		SPTNT29
-SW/IntroB		SPTNT30
-SW/IntroC		SPTNT32
-SW/IntroD		SPTNT36
-SW/IntroE		SPTNT42
-SW/IntroF		SPTNT44
-SW/IntroG		SPTNT02
-SW/IntroH		SPWAIT31
-SW/IntroI		JG9060
-SW/IntroJ		JG92055
-SW/IntroK		DTIME2
-SW/IntroL		JG93000
-SW/IntroM		JG4024
-SW/IntroN		JG44048
-SW/IntroO		JG3005
-SW/IntroP		JG41075
-$Random LoWang/Enter { DSNONE SW/Taunt10 SW/IntroH DSNONE SW/Intro1 SW/Intro2 DSNONE SW/Intro3 SW/Intro4 DSNONE SW/Intro5 SW/Intro6 DSNONE SW/Intro7 SW/Intro8 DSNONE SW/Intro9 SW/IntroA DSNONE SW/IntroB SW/IntroC DSNONE
-					   SW/IntroD SW/IntroE DSNONE SW/IntroF SW/IntroG DSNONE SW/Taunt20 SW/IntroI SW/IntroJ DSNONE SW/IntroK SW/IntroL DSNONE SW/IntroM SW/IntroN DSNONE SW/IntroO SW/IntroP DSNONE }
+SW/Intro1		SWNTRO01
+SW/Intro2		SWNTRO02
+SW/Intro3		SWNTRO03
+SW/Intro4		SWNTRO04
+SW/Intro5		SWNTRO05
+SW/Intro6		SWNTRO06
+SW/Intro7		SWNTRO07
+SW/Intro8		SWNTRO08
+SW/Intro9		SWNTRO09
+SW/Intro10		SWNTRO10
+SW/Intro11		SWNTRO11
+SW/Intro12		SWNTRO12
+SW/Intro13		SWNTRO13
+SW/Intro14		SWNTRO14
+$Random LoWang/Enter { SW/Intro1 SW/Intro2 SW/Intro3 SW/Intro4 SW/Intro5 SW/Intro6 SW/Intro7 SW/Intro8 SW/Intro9 SW/Intro10 SW/Intro11 SW/Intro12 SW/Intro13 SW/Intro14 }
 
 LoWang/Boss1	SPBOSS00
 LoWang/Boss2	SPBOSS01
@@ -352,30 +330,24 @@ SPWAIT05 SPWAIT05
 SPWAIT23 SPWAIT23	
 HIRO032	 HIRO032
 
-IHOPE01  IHOPE01
-IKILLU	 KILLU05
-$random LoWang/FistTaunt { LoWang/BossT LoWang/BossG NULL IHOPE01 SW/Intro8 IKILLU }
-TSWORD1 TSWORD1
-TSWORD2 TSWORD2
-TSWORD3 TSWORD3
-TSWORD4 AHSO5
-$Random LoWang/Split { DSNONE TSWORD1 TSWORD2 TSWORD3 TSWORD4 }
+SW/TauntFist        SWKUNGFU
+$random LoWang/FistTaunt { SW/TauntFist SW/KillTaunt8 SW/KillTaunt9 SW/GibTaunt9 }
+
+SW/SwrdKill1        SWSLICE1
+SW/SwrdKill1        SWSLICE2
+SW/SwrdKill3        SWSLICE3
+SW/SwrdKill4        SWSLICE4
+$Random LoWang/Split { SW/SwrdKill1 SW/SwrdKill2 SW/SwrdKill3 SW/SwrdKill4 SW/KillTaunt8 }
 
 Item/SWpickup		SWPICKUP
 Item/SWpickupbig	SWBGITEM
 
-$Random LoWang/Secret { SW_SECRET1 SW_SECRET2 sw/katana_draw }
-
-SW_SECRET1		Sounds/ShadowWarrior/Player/SW_SECRET1
-SW_SECRET2		Sounds/ShadowWarrior/Player/SW_SECRET2
-
-$Random SW/Secret { DSNONE LoWang/Secret0 LoWang/Secret1 DSNONE LoWang/Secret2 SW_SECRET4 DSNONE SW_SECRET5 TSWORD4 DSNONE }
-
-LoWang/Secret0	SPKEY0
-LoWang/Secret1	SPKEY1
-LoWang/Secret2	SPKEY2
-SW_SECRET4		Sounds/ShadowWarrior/Player/SW_SECRET4
-SW_SECRET5		Sounds/ShadowWarrior/Player/SW_SECRET5
+LoWang/Secret   SEC-SHAD
+$random SW/Secret { LoWang/Secret1 LoWang/Secret2 LoWang/Secret3 LoWang/Secret4 }
+LoWang/Secret1	SWSECRT1
+LoWang/Secret2	SWSECRT2
+LoWang/Secret3	SWSECRT3
+LoWang/Secret4	SWSECRT4
 
 $Random LoWang/Flirt { LoWang/Flirt1 LoWang/Flirt2 LoWang/Flirt3 LoWang/Flirt4 LoWang/Flirt5 LoWang/Flirt6 LoWang/Flirt7 LoWang/Flirt8 LoWang/Flirt9 LoWang/Flirt10 }
 LoWang/Flirt1 "Sounds/ShadowWarrior/Player/SPWAIT28.ogg"
@@ -428,14 +400,12 @@ sw/moongirl/talk3		"Sounds/ShadowWarrior/Randoms/SW_LANI066.flac"
 
 sw/moongirl/gift		"Sounds/ShadowWarrior/Randoms/SW_LANI060.wav"
 
-$Random	LoWang/Eww { LoWang/Eww1 LoWang/Eww2 LoWang/Eww3 LoWang/Eww4 LoWang/Eww5 LoWang/Eww6 LoWang/Eww7 }
-LoWang/Eww1		JG45067
-LoWang/Eww2		SPBOSS00
-LoWang/Eww3		SPBOSS01
-LoWang/Eww4		SPBOSS02
-LoWang/Eww5		SPBOSS03
-LoWang/Eww6		SPBOSS04
-LoWang/Eww7		SPBOSS05
+$Random	LoWang/Eww { LoWang/Eww1 LoWang/Eww2 LoWang/Eww3 LoWang/Eww4 LoWang/Eww5 }
+LoWang/Eww1		SWGROSS1
+LoWang/Eww2		SWGROSS2
+LoWang/Eww3		SWGROSS3
+LoWang/Eww4		SWGROSS4
+LoWang/Eww5		SWGROSS5
 
 $random	sw/rabbit/die	{ sw/rabbit/die1 sw/rabbit/die2 sw/rabbit/die3 }
 sw/rabbit/die1		"Sounds/ShadowWarrior/Randoms/SW_RABDIE1.wav"
@@ -446,6 +416,6 @@ sw/rabbit/screw		"Sounds/ShadowWarrior/Randoms/SW_RABATK1.wav"
 $Random DarkSideAI/LoWang/Taunt { LoWang/BossW SW/KillTauntF OlWang/BossB LoWang/BossV SW/Taunt17 SW/GibTauntF SW/Taunt19 SW/Taunt26 SW/Taunt27 SW/Taunt29 SW/Taunt30 
 					   SW/Taunt16 SW/Taunt15 SW/Taunt14 SW/Taunt13 SW/Taunt1 SW/Taunt2 SW/Taunt3 SW/Taunt4 SW/Taunt25 SW/Taunt28 SW/Taunt31	SW/Taunt33
 					   SW/Taunt5 SW/Taunt6 SW/Taunt7 SW/Taunt8 SW/Taunt9 SW/Taunt11 SW/Taunt12 SW/Taunt18 SW/Taunt21 SW/Taunt22 SW/Taunt24 SW/Taunt32 SW/Taunt44 }
-$random  DarkSideAI/LoWang/Pain { SWPAIN1  SWPAIN2  SWPAIN3 SWPAIN4 }
-$random  DarkSideAI/LoWang/Death { SWYELL1  SWYELL2 SWYELL3 SWYELL4  SWYELL5 }
+$alias DarkSideAI/LoWang/Pain SWPAIN100
+$alias DarkSideAI/LoWang/Death SWPAIN25
 DarkSideAI/LoWang/XDeath	SWGIBSTR

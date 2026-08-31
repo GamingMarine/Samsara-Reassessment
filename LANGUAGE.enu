@@ -1311,6 +1311,7 @@ SECRETFOUND_QUAKE1 = "\ccYou found a secret area!";
 SECRETFOUND_BLOOD_1 = "\ccA secret is revealed.";
 SECRETFOUND_BLOOD_2 = "\ccYou found a secret.";
 SECRETFOUND_STRIFE = "\c[Fire]You found a secret area!\c-";
+SECRETFOUND_CORRIDOR7 = "\cfRestricted Area Entered";
 SECRETFOUND_DARKFORCES = "\c[C5]You found a secret!\c-";
 SECRETFOUND_HALFLIFE = "\c[HEVYellow]Unmarked location detected.\c-";
 SECRETFOUND_HALFLIFEOPFOR = "\c[PCVGreen]Secret room found.\c-";
