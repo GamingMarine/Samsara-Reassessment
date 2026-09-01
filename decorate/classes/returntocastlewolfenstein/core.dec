@@ -10,8 +10,8 @@ Actor RTCW_CarryingAlliedWeaponToken : TemporaryBoolean {}
 
 Actor RTCW_Weapon : Weapon
 {
-	Weapon.BobStyle Inverse
-	Weapon.BobSpeed 2.2
+	Weapon.BobStyle Alpha
+	Weapon.BobSpeed 2.4
 	Weapon.BobRangeX 0.8
 	Weapon.BobRangeY 0.5
 	Inventory.RestrictedTo "RTCW_Blazkowicz"

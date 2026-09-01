@@ -11,11 +11,17 @@ Chex Quest:
 Duke Nukem 3D:
 -Class now uses non-upscaled sound effects.
 
+Blood:
+-Weapon viewbobbing has been tweaked.
+
 Corridor 7:
 -Secret sounds changed to original game's menu select sound.
 -Added a unique message for finding a secret.
 -All weapons have been rescaled and are animated more in-line with the original game.
 -Changed the alien disintegrator's screen flash from red to green.
+
+Star Wars: Dark Forces:
+-Weapon viewbobbing has been tweaked.
 
 Witchaven:
 -Class now uses non-upscaled sound effects.
@@ -33,9 +39,22 @@ Shadow Warrior:
 PowerSlave/Exhumed:
 -Class now uses non-upscaled sound effects.
 -Fixed several sounds having audible clicks in them.
+-Weapon viewbobbing has been tweaked.
 
 CyberMage:
 -Class now uses non-upscaled sound effects.
 -Fixed several sounds having audible clicks in them.
 -Removed some unused sound effects.
 -Changed the weapon pickup sound to be from Crusader. Still not the correct game, but it's Origin, so I'd say it matches.
+
+Return to Castle Wolfenstein:
+-Weapon viewbobbing has been tweaked.
+
+Quake III Arena:
+-Weapon viewbobbing has been tweaked.
+
+Solier of Fortune:
+-Custom weapon viewbobbing has been added.
+
+Outlaws:
+-Weapon viewbobbing has been tweaked.

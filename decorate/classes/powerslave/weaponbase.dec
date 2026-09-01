@@ -2,10 +2,9 @@ actor SamsaraPowerSlaveWeapon : Weapon
 {
     Inventory.PickupSound "PS/Wpickup"
     Inventory.RestrictedTo "PSPlayer"
-    Weapon.BobStyle Smooth
-    Weapon.BobRangeX 0.75
-    Weapon.BobRangeY 0.28
-    Weapon.BobSpeed 1.4
+    Weapon.BobRangeX 1.5
+    Weapon.BobRangeY 1.25
+    Weapon.BobSpeed 1.5
     +UNDROPPABLE
     States
     {

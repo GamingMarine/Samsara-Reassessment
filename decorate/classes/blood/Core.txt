@@ -6,7 +6,7 @@ Actor CalebWeapon : Weapon
 	Weapon.BobStyle Smooth
 	Weapon.BobRangeX 0.2
 	Weapon.BobRangeY 0.4
-	Weapon.BobSpeed 0.5
+	Weapon.BobSpeed 0.65
 	Inventory.RestrictedTo "Caleb"
 	States
 	{

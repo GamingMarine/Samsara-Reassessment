@@ -3,10 +3,10 @@ actor SamsaraOutlawsWeapon : Weapon
 	Inventory.PickupMessage "Yeehaw partner! It looks like there's no pickup message hooked up. Please help that Shiny Metagross fella out and fill them for him!"
 	Inventory.PickupSound "Outlaws/WeaponPickup"
     Inventory.RestrictedTo "OutlawsPlayer"
-	Weapon.BobStyle "InverseSmooth"
-    Weapon.BobRangeX 0.4
+	Weapon.BobStyle "Alpha"
+    Weapon.BobRangeX 0.25
     Weapon.BobRangeY 0.25
-    Weapon.BobSpeed 1.5
+    Weapon.BobSpeed 2
     +ALT_AMMO_OPTIONAL
     +AMMO_OPTIONAL
     +NOALERT
