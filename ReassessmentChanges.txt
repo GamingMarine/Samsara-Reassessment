@@ -1,5 +1,6 @@
 General:
 -Refactored all cases of folders with differing capitalization, to allow the pk3 builder to work under Linux.
+-Changed the name of the maximum jump height option value to something a little less insensitive.
 
 Doom:
 -Secret sound changed to Unity/KEX port sound effect.
@@ -13,6 +14,8 @@ Duke Nukem 3D:
 Corridor 7:
 -Secret sounds changed to original game's menu select sound.
 -Added a unique message for finding a secret.
+-All weapons have been rescaled and are animated more in-line with the original game.
+-Changed the alien disintegrator's screen flash from red to green.
 
 Witchaven:
 -Class now uses non-upscaled sound effects.
@@ -24,6 +27,7 @@ Half-Life:
 Shadow Warrior:
 -The guardian head's viewbobbing has been tweaked.
 -Secret sounds changed to ripper heart sound from the prototypes.
+-(WIP) Lo Wang's voice clips have been completely overhauled, recontextualizing pre-existing dialogue and impleenting previously unused behavior.
 -The uzi is now animated in TEXTURES.
 
 PowerSlave/Exhumed:

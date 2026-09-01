@@ -8,6 +8,7 @@ actor Corridor7WeaponBase : InstantSwitchWeapon
     Weapon.BobSpeed 4
     Weapon.AmmoType2 "C7ProxyMineAmmo"
     Weapon.AmmoUse2 1
+    Weapon.YAdjust 16
     +ALT_AMMO_OPTIONAL
     +NOALERT
     +UNDROPPABLE

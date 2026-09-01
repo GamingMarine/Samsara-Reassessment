@@ -24,7 +24,7 @@ actor "M24CAW" : Corridor7WeaponBase
 
       Fire:
         TNT1 A 0 A_AlertMonsters
-        C7MG B 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        C7MG BC 3 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
         TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,2)
         TNT1 A 0 A_JumpIfInventory("Clip",1,1)
         goto HoldStart
@@ -37,7 +37,7 @@ actor "M24CAW" : Corridor7WeaponBase
       HoldStart:
         TNT1 A 0 A_TakeInventory("SamsaraCorridor7CAWAttackSilentSound")
         TNT1 A 0 A_GiveInventory("SamsaraCorridor7CAWAttackHandler")
-        C7MG C 3 Bright A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        C7MG D 3 Bright A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
         TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,2)
         TNT1 A 0 A_JumpIfInventory("Clip",1,1)
         goto Hold2Start
@@ -46,9 +46,9 @@ actor "M24CAW" : Corridor7WeaponBase
 
       Hold2Start:
         TNT1 A 0 A_GiveInventory("SamsaraCorridor7CAWAttackHandler")
-        C7MG D 3 Bright A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        C7MG E 3 Bright A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
         TNT1 A 0 A_ReFire
-        C7MG HGFE 3 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        C7MG F 3 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
         goto Ready
 
       AltFire:
