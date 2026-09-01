@@ -31,8 +31,6 @@ $limit CM/FGExp 0
 // BLAST RIFLE
 
 CM/BRFire            CMBRFR
-CM/BRReload1         CMBRRL
-CM/BRReload2         CMBRRL2
 
 // SMG
 
@@ -117,9 +115,9 @@ cmtrooper/fire3          CMTRP08
 cmtrooper/fire4          CMTRP10
 cmtrooper/fire5          CMTRP16
 cmtrooper/pain           CMTRPPN
-cmtrooper/death          CMTRPDT
+cmtrooper/death          CMPLDTH1
 
-CYBERM_SECRET1			 Sounds/Cybermage/CYBERM_SECRET1
+CYBERM_SECRET1			 SEC-CMAG
 
 DarkSideAI/Cybermage/Taunt	CMPLTANT
 DarkSideAI/Cybermage/Pain		CMPLPAIN

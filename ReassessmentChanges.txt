@@ -36,3 +36,6 @@ PowerSlave/Exhumed:
 
 CyberMage:
 -Class now uses non-upscaled sound effects.
+-Fixed several sounds having audible clicks in them.
+-Removed some unused sound effects.
+-Changed the weapon pickup sound to be from Crusader. Still not the correct game, but it's Origin, so I'd say it matches.
