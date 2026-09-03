@@ -2,6 +2,7 @@ $playersound			OLPlayer	male	*pain100	"Sounds/outlaws/player/outlaws_HIT.WAV"
 $playersounddup         OLPlayer   male	*pain75		*pain100
 $playersounddup         OLPlayer	male	*pain50		*pain100
 $playersounddup         OLPlayer	male	*pain25		*pain100
+$playersound			OLPlayer	male	*jump		"Sounds/outlaws/player/outlaws_JAJUMP.WAV"
 $playersound			OLPlayer	male	*death		"Sounds/outlaws/player/outlaws_JADIE.WAV"
 $playersound 			OLPlayer   male    *taunt      silence //todo: find good taunt sounds that sound like the marshal 
 $playersound			OLPlayer	male	*gibbed		"Sounds/outlaws/player/outlaws_JADIE.WAV"

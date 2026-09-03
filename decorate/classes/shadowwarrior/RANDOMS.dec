@@ -1343,44 +1343,27 @@ Actor SW_WashGirl : SamsaraMiscCharHumanoidFemaleDynamicTotalGib
 			Goto Spawn
 		Shoot:
 			SW61 C 0 A_ChangeFlag("USESPECIAL",0)
-			SW61 C 0 A_PlaySound("sw/girl/mad",CHAN_VOICE)
-			SW61 C 15
-			SW61 C 0 A_JumpIfTargetInLOS(1)
-			Goto Spawn		
+			SW61 C 0 A_PlaySound("sw/girl/mad",CHAN_VOICE)	
 			SW61 C 0 A_Playsound("sw/girl/uzi",CHAN_WEAPON)
 			SW61 C 4 A_CustomBulletAttack(4.8, 3.2, 1, 1, "BulletPuffSW", 0, CBAF_NORANDOM)
-			SW61 C 0 A_JumpIfTargetInLOS(1)
-			Goto Spawn
 			SW61 D 0 A_Playsound("sw/girl/uzi",CHAN_WEAPON)
 			SW61 D 4 A_CustomBulletAttack(4.8, 3.2, 1, 1, "BulletPuffSW", 0, CBAF_NORANDOM)
-			SW61 D 0 A_JumpIfTargetInLOS(1)
-			Goto Spawn
 			SW61 C 0 A_Playsound("sw/girl/uzi",CHAN_WEAPON)
 			SW61 C 4 A_CustomBulletAttack(4.8, 3.2, 1, 1, "BulletPuffSW", 0, CBAF_NORANDOM)
-			SW61 C 0 A_JumpIfTargetInLOS(1)
-			Goto Spawn
 			SW61 D 0 A_Playsound("sw/girl/uzi",CHAN_WEAPON)
 			SW61 D 4 A_CustomBulletAttack(4.8, 3.2, 1, 1, "BulletPuffSW", 0, CBAF_NORANDOM)
-			SW61 D 0 A_JumpIfTargetInLOS(1)
-			Goto Spawn
 			SW61 C 0 A_Playsound("sw/girl/uzi",CHAN_WEAPON)
 			SW61 C 4 A_CustomBulletAttack(4.8, 3.2, 1, 1, "BulletPuffSW", 0, CBAF_NORANDOM)
-			SW61 C 0 A_JumpIfTargetInLOS(1)
-			Goto Spawn
 			SW61 D 0 A_Playsound("sw/girl/uzi",CHAN_WEAPON)
 			SW61 D 4 A_CustomBulletAttack(4.8, 3.2, 1, 1, "BulletPuffSW", 0, CBAF_NORANDOM)
-			SW61 D 0 A_JumpIfTargetInLOS(1)
-			Goto Spawn
 			SW61 C 0 A_Playsound("sw/girl/uzi",CHAN_WEAPON)
 			SW61 C 4 A_CustomBulletAttack(4.8, 3.2, 1, 1, "BulletPuffSW", 0, CBAF_NORANDOM)
-			SW61 C 0 A_JumpIfTargetInLOS(1)
-			Goto Spawn
 			SW61 D 0 A_Playsound("sw/girl/uzi",CHAN_WEAPON)
 			SW61 D 4 A_CustomBulletAttack(4.8, 3.2, 1, 1, "BulletPuffSW", 0, CBAF_NORANDOM)
 			Goto Spawn
 		Pain:
 			TNT1 A 0 A_Pain
-			Goto Spawn
+			Goto Shoot+2
 		Pain.Shock:
 		Pain.Tesla:
 			CBGS H 4 A_Pain

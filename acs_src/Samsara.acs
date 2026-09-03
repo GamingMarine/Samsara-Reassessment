@@ -146,7 +146,7 @@
 #include "SamsaraGeneral.acs"
 #include "SamsaraAllies.acs"
 #include "SamsaraMonologue.acs"
-#include "SamsaraXMas.acs"
+#include "SamsaraXmas.acs"
 #include "SamsaraQuake.acs"
 #include "SamsaraZScript.acs"
 #include "SamsaraPistorbit.acs"

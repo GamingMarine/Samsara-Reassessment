@@ -586,6 +586,11 @@ script "SamsaraWeaponTaunt" (void)
         GiveInventory("DukeWeaponTaunt", 1);
         break;
 
+      case CLASS_SW:
+        Delay(8);
+        GiveInventory("LoWangWeaponTaunt", 1);
+        break;
+
       case CLASS_RR:
         Delay(8);
         GiveInventory("LeonardWeaponTaunt", 1);

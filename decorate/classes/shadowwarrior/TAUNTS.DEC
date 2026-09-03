@@ -79,6 +79,22 @@ actor LoWangGibTaunt: LoWangTaunt {
   }
 }
 
+actor LoWangWeaponTaunt: LoWangTaunt {
+  States {
+	Pickup:
+		TNT1 A 0 A_JumpIfInventory("SWClass", 1, "ActuallyLoWang")
+		stop
+	
+	ActuallyLowang:
+		TNT1 A 0 A_JumpIfInventory("LoWangTauntCooldown", 1, "UseStop")
+		TNT1 A 0 A_JumpIfInventory("SamsaraBallgag", 1, "UseStop")
+		TNT1 A 0 A_PlaySound("LoWang/WeaponTaunt", CHAN_VOICE|CHAN_MAYBE_LOCAL)
+		TNT1 A 0 A_GiveInventory("LoWangTauntCooldown", 5)
+		TNT1 A 0 ACS_NamedExecuteAlways("LoWangTauntCooldown")
+		stop
+  }
+}
+
 Actor LoWangPunchTaunt : LoWangTaunt { 
   States {
 	Pickup:

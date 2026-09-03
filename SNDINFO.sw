@@ -131,43 +131,12 @@ GRUNT06 GRUNT06
 GRUNT07 GRUNT07
 $random  SW/PUSH { GRUNT06 GRUNT06 GRUNT06 GRUNT06 GRUNT06 GRUNT06 GRUNT06 GRUNT06 GRUNT06 GRUNT06 GRUNT06 GRUNT06 GRUNT07 }
 
-SW/Taunt1	SPTNT04
-SW/Taunt2	SPTNT02
-SW/Taunt3	SPTNT12
-SW/Taunt4	SPTNT14
-SW/Taunt5	SPTNT16
-SW/Taunt6	SPTNT19
-SW/Taunt7	SPTNT30
-SW/Taunt8	SPTNT32
-SW/Taunt9	SPTNT13
-SW/Taunt10	SPTNT34
-SW/Taunt11	SPTNT52
-SW/Taunt12	SPTNT53
-SW/Taunt13	SPWAIT10
-SW/Taunt14	SPWAIT06
-SW/Taunt15 	SPWAIT08
-SW/Taunt16	SPWAIT14
-SW/Taunt17  SPWAIT11
-SW/Taunt18	JG2078
-SW/Taunt19	JG3059
-SW/Taunt20	JG3047
-SW/Taunt21	JG6053
-SW/Taunt22	JG6051
-SW/Taunt23	JGB023
-SW/Taunt24	JG2045
-SW/Taunt25	JG3070
-SW/Taunt26	JG3017
-SW/Taunt27	JG2087
-SW/Taunt28	JG44025
-SW/Taunt29	JG44032
-SW/Taunt30	JG44027
-SW/Taunt31	JG42004
-SW/Taunt32	SPEED04
-SW/Taunt33  SPTNT08
-SW/Taunt44	JG44052
-$Random LoWang/Taunt { LoWang/BossW SW/KillTauntF OlWang/BossB LoWang/BossV SW/Taunt17 SW/GibTauntF SW/Taunt19 SW/Taunt26 SW/Taunt27 SW/Taunt29 SW/Taunt30 
-					   SW/Taunt16 SW/Taunt15 SW/Taunt14 SW/Taunt13 SW/Taunt1 SW/Taunt2 SW/Taunt3 SW/Taunt4 SW/Taunt25 SW/Taunt28 SW/Taunt31	SW/Taunt33
-					   SW/Taunt5 SW/Taunt6 SW/Taunt7 SW/Taunt8 SW/Taunt9 SW/Taunt11 SW/Taunt12 SW/Taunt18 SW/Taunt21 SW/Taunt22 SW/Taunt24 SW/Taunt32 SW/Taunt44 }
+SW/Sing1			SWSING1
+SW/Sing2			SWSING2
+SW/Sing3			SWSING3
+SW/Sing4			SWSING4
+SW/Sing5			SWSING5
+$Random LoWang/Sing { SW/Sing1 SW/Sing2 SW/Sing3 SW/Sing4 SW/Sing5 }
 
 SW/MinorHurt1       SWHURT1
 SW/MinorHurt2       SWHURT2
@@ -202,12 +171,10 @@ $playersound	LoWang	 male	*land			SPLAND0
 $playeralias	LoWang	 male	*usefail		SW/PUSH
 $playersound	LoWang	 male	*puzzfail		GRUNT06
 $playeralias	LoWang	 male	*grunt			SW/MinorHurt2
-$playeralias	LoWang	 male	*taunt			LoWang/Taunt
+$playeralias	LoWang	 male	*taunt			LoWang/Sing
 $playeralias   	LoWang   male   *drown          SW/Drown
-$Playeralias	LoWang	 male   *surface		LoWang/Surface
+$Playersound	LoWang	 male   *surface		SWSURFAC
 $playersound    LoWang   male   *poison     	SWPOISON
-
-LoWang/Surface	SPHEAL2
 
 SW/KillTaunt1	SWKILL01
 SW/KillTaunt2	SWKILL02
@@ -261,6 +228,15 @@ SW/GibTaunt17	SWGIBD17
 SW/GibTaunt18	SWGIBD18
 $Random	LoWang/TauntGib { SW/GibTaunt1 SW/GibTaunt2 SW/GibTaunt3 SW/GibTaunt4 SW/GibTaunt5 SW/GibTaunt6 SW/GibTaunt7 SW/GibTaunt8 SW/GibTaunt9 SW/GibTaunt10 SW/GibTaunt11 SW/GibTaunt12 SW/GibTaunt13 SW/GibTaunt14 SW/GibTaunt15 SW/GibTaunt16 SW/GibTaunt17 SW/GibTaunt18 }
 
+SW/WeaponTaunt1 SWWEPN1
+SW/WeaponTaunt2 SWWEPN2
+SW/WeaponTaunt3 SWWEPN3
+SW/WeaponTaunt4 SWWEPN4
+SW/WeaponTaunt5 SWWEPN5
+SW/WeaponTaunt6 SWWEPN6
+$Random LoWang/WeaponTaunt { SW/WeaponTaunt1 SW/WeaponTaunt2 SW/WeaponTaunt3 SW/WeaponTaunt4 SW/WeaponTaunt5 SW/WeaponTaunt6 }
+
+
 SW/Intro1		SWNTRO01
 SW/Intro2		SWNTRO02
 SW/Intro3		SWNTRO03
@@ -277,53 +253,10 @@ SW/Intro13		SWNTRO13
 SW/Intro14		SWNTRO14
 $Random LoWang/Enter { SW/Intro1 SW/Intro2 SW/Intro3 SW/Intro4 SW/Intro5 SW/Intro6 SW/Intro7 SW/Intro8 SW/Intro9 SW/Intro10 SW/Intro11 SW/Intro12 SW/Intro13 SW/Intro14 }
 
-LoWang/Boss1	SPBOSS00
-LoWang/Boss2	SPBOSS01
-LoWang/Boss3	SPBOSS02
-LoWang/Boss4	SPBOSS03
-LoWang/Boss5	SPBOSS04
-LoWang/Boss6	SPBOSS05
-LoWang/Boss7	SPBOSS06
-LoWang/Boss8	SPBOSS07
-LoWang/Boss9	SPBOSS08
-LoWang/BossA	SPBOSS09
-LoWang/BossB	SPBOSS10
-LoWang/BossC	SPBOSS11
-LoWang/BossD	SPBOSS12
-LoWang/BossE	SPBOSS13
-LoWang/BossF	SPBOSS14
-LoWang/BossG	SPBOSS15
-LoWang/BossH	SPBOSS16
-LoWang/BossJ	SPOUCH0
-LoWang/BossK	SPOUCH2
-LoWang/BossL	SPTNT18
-LoWang/BossM	SPTNT20
-LoWang/BossN	SPTNT31
-LoWang/BossO    SPTNT37
-LoWang/BossP    SPTNT38
-LoWang/BossQ    SPTNT41
-LoWang/BossR    SPTNT43
-LoWang/BossS    SPTNT48
-LoWang/BossT    SPTNT49
-LoWang/BossU    SPWAIT17
-LoWang/BossV    SPWAIT22
-LoWang/BossW    SPWAIT27
-LoWang/BossX    SPWAIT28
-LoWang/BossY    SPWAIT30
-LoWang/BossZ    SPWAIT06
-OlWang/BossA	SPTNT05
-OlWang/BossB	SPWAIT07
-Olwang/BossC	SPWAIT12
-Olwang/BossD    SPWAIT01
-Olwang/BossE    SPTNT57
-Olwang/BossF    JG44011
-Olwang/BossG    MFLY02
-Olwang/BossH	JG1088
-Olwang/BossI	JG4002
-Olwang/BossJ	JG2005
-$Random LoWang/BossSight { LoWang/Boss1 LoWang/Boss2 LoWang/Boss3 LoWang/Boss4 LoWang/Boss5 LoWang/Boss6 LoWang/Boss7 LoWang/Boss8 LoWang/Boss9 LoWang/BossA LoWang/BossB LoWang/BossC LoWang/BossD LoWang/BossE Olwang/BossH 
-						   LoWang/BossF LoWang/BossG LoWang/BossH LoWang/BossJ LoWang/BossK LoWang/BossL LoWang/BossM LoWang/BossN LoWang/BossO LoWang/BossP LoWang/BossQ LoWang/BossR LoWang/BossS SW/Taunt23 Olwang/BossJ 
-						   LoWang/BossT LoWang/BossU LoWang/BossV LoWang/BossW LoWang/BossX LoWang/BossY LoWang/BossZ OlWang/BossA SW/IntroE OlWang/BossB Olwang/BossD Olwang/BossE SW/IntroH Olwang/BossF Olwang/BossG Olwang/BossI }
+LoWang/Boss1	SWBSST1
+LoWang/Boss2	SWBSST2
+LoWang/Boss3	SWBSST3
+$Random LoWang/BossSight { LoWang/Boss1 LoWang/Boss2 LoWang/Boss3 }
  
 $Random LoWang/MixedTaunt { LoWang/TauntKill LoWang/TauntGib SPWAIT05 SPWAIT23 HIRO032 }
 SPWAIT05 SPWAIT05
@@ -331,7 +264,7 @@ SPWAIT23 SPWAIT23
 HIRO032	 HIRO032
 
 SW/TauntFist        SWKUNGFU
-$random LoWang/FistTaunt { SW/TauntFist SW/KillTaunt8 SW/KillTaunt9 SW/GibTaunt9 }
+$random LoWang/FistTaunt { SW/TauntFist SW/KillTaunt8 SW/KillTaunt9 SW/KillTaunt10 SW/GibTaunt9 }
 
 SW/SwrdKill1        SWSLICE1
 SW/SwrdKill1        SWSLICE2

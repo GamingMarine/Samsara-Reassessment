@@ -4,7 +4,7 @@ actor SamsaraOutlawsWeapon : Weapon
 	Inventory.PickupSound "Outlaws/WeaponPickup"
     Inventory.RestrictedTo "OutlawsPlayer"
 	Weapon.BobStyle "Alpha"
-    Weapon.BobRangeX 0.25
+    Weapon.BobRangeX 0.45
     Weapon.BobRangeY 0.25
     Weapon.BobSpeed 2
     +ALT_AMMO_OPTIONAL

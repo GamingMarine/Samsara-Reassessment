@@ -1,6 +1,9 @@
 General:
--Refactored all cases of folders with differing capitalization, to allow the pk3 builder to work under Linux.
 -Changed the name of the maximum jump height option value to something a little less insensitive.
+
+For developers:
+-Refactored all cases of folders with differing capitalization, to allow the pk3 builder to work under Linux.
+-Fixed Samsara.acs not compiling under Linux.
 
 Doom:
 -Secret sound changed to Unity/KEX port sound effect.
@@ -19,6 +22,7 @@ Corridor 7:
 -Added a unique message for finding a secret.
 -All weapons have been rescaled and are animated more in-line with the original game.
 -Changed the alien disintegrator's screen flash from red to green.
+-Clas now uses non-upscaled sound effects.
 
 Star Wars: Dark Forces:
 -Weapon viewbobbing has been tweaked.
@@ -26,6 +30,7 @@ Star Wars: Dark Forces:
 Witchaven:
 -Class now uses non-upscaled sound effects.
 -Secret sounds reduced to just a single sound.
+-The screen now flashes blue when using a health potion.
 
 Half-Life:
 -Fixed spent 9mm casings incorrectly making Shadow Warrior sounds.
@@ -33,8 +38,9 @@ Half-Life:
 Shadow Warrior:
 -The guardian head's viewbobbing has been tweaked.
 -Secret sounds changed to ripper heart sound from the prototypes.
--(WIP) Lo Wang's voice clips have been completely overhauled, recontextualizing pre-existing dialogue and impleenting previously unused behavior.
+-(WIP) Lo Wang's voice clips have been completely overhauled, recontextualizing pre-existing dialogue and implementing previously unused behavior.
 -The uzi is now animated in TEXTURES.
+-(WIP) Randoms now retaliate when shot at.
 
 PowerSlave/Exhumed:
 -Class now uses non-upscaled sound effects.
@@ -58,3 +64,4 @@ Solier of Fortune:
 
 Outlaws:
 -Weapon viewbobbing has been tweaked.
+-Implemented the unused player jumping sound.

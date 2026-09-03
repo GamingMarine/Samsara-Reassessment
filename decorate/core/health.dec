@@ -948,6 +948,7 @@ actor SamsaraHealPack2Inventory : CustomInventory
 
       UsePlaySoundWitchaven:
         TNT1 A 0 A_PlaySound("gplayer/drink",CHAN_ITEM)
+        TNT1 A 0 A_SetBlend("0000FF",0.75,15)
         goto UseSuccess
 
       UsePlaySoundCyberMage:
