@@ -1,86 +1,86 @@
 //Doom64Guy
 
-$playersound	Doom64Guy	 male	*death			sounds/doom64/DG64PLDETH.ogg
+$playersound	Doom64Guy	 male	*death			sounds/doom64/DG64PLDETH.wav
 $playersounddup	Doom64Guy	 male	*xdeath			*death
 $playersound	Doom64Guy	 male	*burndeath		DGDETHF // Subject to change.
 $playersounddup	Doom64Guy	 male	*crazydeath		*death
 $playersounddup Doom64Guy	 male   *wimpydeath 	*death
 $playersound	Doom64Guy	 male	*gibbed			DG64SLOP
 $playersound	Doom64Guy	 male	*falling		DG64FALL
-$playersound	Doom64Guy	 male	*pain100		sounds/doom64/DG64PLPAIN.ogg
+$playersound	Doom64Guy	 male	*pain100		sounds/doom64/DG64PLPAIN.wav
 $playersounddup	Doom64Guy	 male	*pain75			*pain100
 $playersounddup	Doom64Guy	 male	*pain50			*pain100
 $playersounddup	Doom64Guy	 male	*pain25			*pain100
-$playersound	Doom64Guy	 male	*land			dgland // Also subject to change.
-$playersound	Doom64Guy	 male	*usefail		sounds/doom64/DG64NOWAY.ogg
+$playersound	Doom64Guy	 male	*land			DG64LAND
+$playersound	Doom64Guy	 male	*usefail		sounds/doom64/DG64NOWAY.wav
 $playersound	Doom64Guy	 male	*puzzfail		DG64PUZZ
 $playersounddup	Doom64Guy	 male	*grunt			*usefail
 $playersound	Doom64Guy	 male	*taunt			sounds/doom64/DG64TAUNT.ogg
 $playersound    Doom64Guy    male   *poison         silence
 
 doom64guy/crush					DG64SLOP
-doom64guy/die					sounds/doom64/DG64PLDETH.ogg
+doom64guy/die					sounds/doom64/DG64PLDETH.wav
 doom64guy/falling				DG64FALL
-doom64guy/pain					sounds/doom64/DG64PLPAIN.ogg
+doom64guy/pain					sounds/doom64/DG64PLPAIN.wav
 doom64guy/burn					DGDETHF
 
 $alias doom64guy/wallpunch		doomguy/wallpunch
 $alias doom64guy/wallpunch2		doomguy/wallpunch2
-doom64guy/punch					sounds/doom64/DG64PUNCH.ogg
+doom64guy/punch					sounds/doom64/DG64PUNCH.wav
 $alias doom64guy/punch2			doomguy/punch2
-doom64guy/sawup					sounds/doom64/DG64SAWUP.ogg
-doom64guy/sawidle				sounds/doom64/DG64SAWIDL.ogg
-doom64guy/sawhit				sounds/doom64/DG64SAWHIT.ogg
-doom64guy/sawfull				sounds/doom64/DG64SAWFUL.ogg
-doom64guy/pistol				sounds/doom64/DG64PISTOL.ogg
+doom64guy/sawup					sounds/doom64/DG64SAWUP.wav
+doom64guy/sawidle				sounds/doom64/DG64SAWIDL.wav
+doom64guy/sawhit				sounds/doom64/DG64SAWHIT.wav
+doom64guy/sawfull				sounds/doom64/DG64SAWFUL.wav
+doom64guy/pistol				sounds/doom64/DG64PISTOL.wav
 $alias doom64guy/rifle			doom64guy/pistol
-doom64guy/shotgf				sounds/doom64/DG64SHOTGN.ogg
-doom64guy/sshotf				sounds/doom64/DG64DSHTGN.ogg
-doom64guy/sshoto				sounds/doom64/DG64DBOPN.ogg
-doom64guy/sshotl				sounds/doom64/DG64DBLOAD.ogg
-doom64guy/sshotc				sounds/doom64/DG64DBCLS.ogg
-doom64guy/chngun				sounds/doom64/DG64PISTOL.ogg
+doom64guy/shotgf				sounds/doom64/DG64SHOTGN.wav
+doom64guy/sshotf				sounds/doom64/DG64DSHTGN.wav
+doom64guy/sshoto				sounds/doom64/DG64DBOPN.wav
+doom64guy/sshotl				sounds/doom64/DG64DBLOAD.wav
+doom64guy/sshotc				sounds/doom64/DG64DBCLS.wav
+doom64guy/chngun				sounds/doom64/DG64PISTOL.wav
 $alias doom64guy/mchgun			doom64guy/chngun
 $alias doom64guy/minigun        		doom64guy/chngun
-doom64guy/rocklf				sounds/doom64/DG64RLAUNC.ogg
-doom64guy/rocklx				sounds/doom64/DG64BAREXP.ogg
+doom64guy/rocklf				sounds/doom64/DG64RLAUNC.wav
+doom64guy/rocklx				sounds/doom64/DG64BAREXP.wav
 $alias doom64guy/grenlf         doom64guy/rocklf
 doom64guy/grbnce        		sounds/doom64/DG64BOUS.ogg
 $alias doom64guy/grenlx         doom64guy/rocklx
-doom64guy/plasmaidle			sounds/doom64/DG64PLIDLE.ogg
-doom64guy/plasmaf				sounds/doom64/DG64PLASMA.ogg
-doom64guy/plasmax				sounds/doom64/DG64FIRXPL.ogg
+doom64guy/plasmaidle			sounds/doom64/DG64PLIDLE.wav
+doom64guy/plasmaf				sounds/doom64/DG64PLASMA.wav
+doom64guy/plasmax				sounds/doom64/DG64FIRXPL.wav
 doom64guy/railgf          		sounds/doom64/DG64RAILG.ogg
 doom64guy/railgu                sounds/doom64/DG64RAILR.ogg
 doom64guy/railgl                nosoundforyoubitch
 //$alias doom64guy/railgu       doom64guy/sshoto
 //$alias doom64guy/railgl       doom64guy/sshotc
-doom64guy/bfgf					sounds/doom64/DG64BFG.ogg
-doom64guy/bfgx					sounds/doom64/DG64RXPLOD.ogg
-doom64guy/unmaker				sounds/doom64/DG64UNMAKR.ogg
+doom64guy/bfgf					DG64BFG
+doom64guy/bfgx					sounds/doom64/DG64RXPLOD.wav
+doom64guy/unmaker				sounds/doom64/DG64UNMAKR.wav
 doom64guy/bfg10kf        sounds/doom64/DG6410KF.ogg
 doom64guy/bfg10kfire             sounds/doom64/DG6410KB.ogg
 $alias doom64guy/bfg10kx        doom64guy/rocklx
 doom64guy/bfg10kcool     sounds/doom64/DG6410KC.ogg
 doom64guy/bfg10kidle     sounds/doom64/DG6410KI.ogg
-doom64guy/explode				sounds/doom64/DG64BAREXP.ogg
+doom64guy/explode				sounds/doom64/DG64BAREXP.wav
 
-doom64guy/itemget				sounds/doom64/DG64ITEMUP.ogg
-doom64guy/weaponget				sounds/doom64/DG64WPNUP.ogg
-doom64guy/powerupget			sounds/doom64/DG64GETPOW.ogg
+doom64guy/itemget				sounds/doom64/DG64ITEMUP.wav
+doom64guy/weaponget				sounds/doom64/DG64WPNUP.wav
+doom64guy/powerupget			sounds/doom64/DG64GETPOW.wav
 $random doom64guy/poweruporitemget	{ doom64guy/powerupget doom64guy/itemget }
 
 $random friendlyimp64/sight     { friendlyimp64/sight1 friendlyimp64/sight2 }
 $random friendlyimp64/death     { friendlyimp64/death1 friendlyimp64/death2 }
 
-friendlyimp64/sight1			sounds/doom64/DG64BGSIT1.ogg
-friendlyimp64/sight2			sounds/doom64/DG64BGSIT2.ogg
-friendlyimp64/death1			sounds/doom64/DG64BGDTH1.ogg
-friendlyimp64/death2			sounds/doom64/DG64BGDTH2.ogg
-friendlyimp64/pain				sounds/doom64/DG64POPAIN.ogg
-friendlyimp64/active			sounds/doom64/DG64BGACT.ogg
+friendlyimp64/sight1			sounds/doom64/DG64BGSIT1.wav
+friendlyimp64/sight2			sounds/doom64/DG64BGSIT2.wav
+friendlyimp64/death1			sounds/doom64/DG64BGDTH1.wav
+friendlyimp64/death2			sounds/doom64/DG64BGDTH2.wav
+friendlyimp64/pain				sounds/doom64/DG64POPAIN.wav
+friendlyimp64/active			sounds/doom64/DG64BGACT.wav
 friendlyimp64/melee				DG64CLAW
-friendlyimp64/attack			sounds/doom64/DG64FIRSHT.ogg
+friendlyimp64/attack			sounds/doom64/DG64FIRSHT.wav
 $alias friendlyimp64/gibbed		doom64guy/crush
 $alias friendlyimp64/crush		doom64guy/crush
 $alias friendlyimp64/shotx		doom64guy/plasmax
@@ -98,7 +98,7 @@ $limit doom64guy/explode 0
 doom64guy/secret                sounds/doom64/DG64ITMBK.wav // it works for now
 
 DarkSideAI/Doom64guy/Taunt		sounds/doom64/DG64TAUNT.ogg
-DarkSideAI/Doom64guy/Pain		sounds/doom64/DG64PLPAIN.ogg
-DarkSideAI/Doom64guy/Death		sounds/doom64/DG64PLDETH.ogg
+DarkSideAI/Doom64guy/Pain		sounds/doom64/DG64PLPAIN.wav
+DarkSideAI/Doom64guy/Death		sounds/doom64/DG64PLDETH.wav
 DarkSideAI/Doom64guy/XDeath		DG64SLOP
 DarkSideAI/Doom64guy/Burn		DGDETHF

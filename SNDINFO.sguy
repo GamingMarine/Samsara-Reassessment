@@ -17,7 +17,7 @@ $playersound	strifeguy	male	*grunt		sgploof
 $playersound	strifeguy	male	*land		"Sounds/Quake2/Player/quake2_BMMLAND1.wav"
 $playersound	strifeguy	male	*usefail	sgpnoway
 $playersound	strifeguy	male	*puzzfail	sgpnoway
-$playersound	strifeguy   male	*taunt		sgpnoway
+$playersound	strifeguy   male	*taunt		sgtaunt
 $playersound    strifeguy   male    *poison     silence
 
 StrifeGuy/Taunt		SG_TANT_

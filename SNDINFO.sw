@@ -25,6 +25,10 @@ SW/StickyTaunt3         SWSTICK3
 SW/StickyTaunt4         SWSTICK4
 $random  LoWang/StickyTaunt { SW/StickyTaunt1 SW/StickyTaunt2 SW/StickyTaunt3 SW/StickyTaunt4 }
 
+SW/HeartTaunt1          SWHEART1
+SW/HeartTaunt2          SWHEART2
+$random LoWang/HeartTaunt { SW/HeartTaunt1 SW/HeartTaunt2 }
+
 // * Fist
 sw/fists_wall 	SWF0WALL
 sw/fists_flesh 	SWF0FLSH

@@ -8,6 +8,10 @@ For developers:
 Doom:
 -Secret sound changed to Unity/KEX port sound effect.
 
+Doom 64:
+-Class now uses non-upscaled sound effects.
+-Added a unique sound for landing.
+
 Chex Quest:
 -Re-converted several downsampled sounds, which had audible hissing in them.
 
@@ -17,12 +21,15 @@ Duke Nukem 3D:
 Blood:
 -Weapon viewbobbing has been tweaked.
 
+Strife:
+-Added a new taunting sound, taken from the 1995 prototype.
+
 Corridor 7:
 -Secret sounds changed to original game's menu select sound.
 -Added a unique message for finding a secret.
 -All weapons have been rescaled and are animated more in-line with the original game.
 -Changed the alien disintegrator's screen flash from red to green.
--Clas now uses non-upscaled sound effects.
+-Class now uses non-upscaled sound effects.
 
 Star Wars: Dark Forces:
 -Weapon viewbobbing has been tweaked.
