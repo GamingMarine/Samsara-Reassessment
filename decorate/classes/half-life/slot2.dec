@@ -539,58 +539,20 @@ actor HLShotgunCounter : Ammo
     +IGNORESKILL
 }
 
-Actor HLShotgunBullet : HLBullet
+Actor HLShotgunBullet : HLBulletThruGhost { Args 10 }
+
+Actor HLShotgunBulletCoop : HLShotgunBullet
 {
-    +THRUGHOST
-    Damage (0)
-    States
-    {
-        Crash:
-            TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",10)
-            Goto Super::Death
-        XDeath:
-            TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",10)
-            Goto Super::XDeath
-    }
+    Species "Player"
+    +THRUSPECIES
 }
-Actor HLShotgunBulletCoop : HLBulletCoop {
-    +THRUGHOST
-    Damage (0)
-    States
-    {
-        Crash:
-            TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",10)
-            Goto Super::Death
-        XDeath:
-            TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",10)
-            Goto Super::XDeath
-    }
-}
-Actor HLMegaShotgunBullet : HLBullet {
-    +THRUGHOST
-    Damage (0)
-    States
-    {
-        Crash:
-            TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",10)
-            Goto Super::Death
-        XDeath:
-            TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",10)
-            Goto Super::XDeath
-    }
-}
-Actor HLMegaShotgunBulletCoop : HLBulletCoop {
-    +THRUGHOST
-    Damage (0)
-    States
-    {
-        Crash:
-            TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",10)
-            Goto Super::Death
-        XDeath:
-            TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",10)
-            Goto Super::XDeath
-    }
+
+Actor HLMegaShotgunBullet : HLBulletThruGhost { Args 10 }
+
+Actor HLMegaShotgunBulletCoop : HLMegaShotgunBullet
+{
+    Species "Player"
+    +THRUSPECIES
 }
 
 Actor HLShotgunShellCaser

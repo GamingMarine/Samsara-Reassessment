@@ -397,34 +397,12 @@ actor HLPythonCounter : Ammo
 
 actor HLPythonRoundsUsed : Counter {}
 
-actor HLPythonBullet : HLBullet
-{
-    +THRUGHOST
-    Damage (0)
-    States
-    {
-        Crash:
-            TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",80)
-            Goto Super::Death
-        XDeath:
-            TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",80)
-            Goto Super::XDeath
-    }
-}
+actor HLPythonBullet : HLBulletThruGhost { Args 80 }
 
-actor HLPythonBulletCoop : HLBulletCoop
+actor HLPythonBulletCoop : HLPythonBullet
 {
-    +THRUGHOST
-    Damage (0)
-    States
-    {
-        Crash:
-            TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",80)
-            Goto Super::Death
-        XDeath:
-            TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",80)
-            Goto Super::XDeath
-    }
+    Species "Player"
+    +THRUSPECIES
 }
 
 actor HLPythonMuzzleFlash : HL9MMMuzzleFlash
@@ -1063,64 +1041,20 @@ actor HLDeagleCounter : Ammo
     +IGNORESKILL
 }
 
-actor HLDeagleBullet : HLBullet
+actor HLDeagleBullet : HLBulletThruGhost { Damage (70) } // cannot headshot
+
+actor HLDeagleBulletCoop : HLDeagleBullet
 {
-    +THRUGHOST
-    Damage (70)
-    States
-    {
-        Crash:
-            //TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",70)
-            Goto Super::Death
-        XDeath:
-            //TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",70)
-            Goto Super::XDeath
-    }
+    Species "Player"
+    +THRUSPECIES
 }
 
-actor HLDeagleBulletCoop : HLBulletCoop
-{
-    +THRUGHOST
-    Damage (70)
-    States
-    {
-        Crash:
-            //TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",70)
-            Goto Super::Death
-        XDeath:
-            //TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",70)
-            Goto Super::XDeath
-    }
-}
+actor HLDeagleBulletLaser : HLBulletThruGhost { Args 70 }
 
-actor HLDeagleBulletLaser : HLBullet
+actor HLDeagleBulletLaserCoop : HLDeagleBulletLaser
 {
-    +THRUGHOST
-    Damage (0)
-    States
-    {
-        Crash:
-            TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",70)
-            Goto Super::Death
-        XDeath:
-            TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",70)
-            Goto Super::XDeath
-    }
-}
-
-actor HLDeagleBulletLaserCoop : HLBulletCoop
-{
-    +THRUGHOST
-    Damage (0)
-    States
-    {
-        Crash:
-            TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",70)
-            Goto Super::Death
-        XDeath:
-            TNT1 A 0 ACS_NamedExecuteWithResult("ScriptedBulletDamage",70)
-            Goto Super::XDeath
-    }
+    Species "Player"
+    +THRUSPECIES
 }
 
 actor HLDeagleLaserDot
