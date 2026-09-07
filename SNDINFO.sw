@@ -126,14 +126,9 @@ wang/twowangs	  			SWHEARTW
 SW/DarkNinja/FlashBomb		Sounds/SW/SWGASPOP.WAV
 GasBomb/Loop				SW_HISS1
 
-SW/Drown1	SPKILL1
-SW/Drown2	SPKILL2
-
-$Random SW/Drown { SW/Drown1 SW/Drown2 }
-
-GRUNT06 GRUNT06
-GRUNT07 GRUNT07
-$random  SW/PUSH { GRUNT06 GRUNT06 GRUNT06 GRUNT06 GRUNT06 GRUNT06 GRUNT06 GRUNT06 GRUNT06 GRUNT06 GRUNT06 GRUNT06 GRUNT07 }
+SW/Push1    SWNOWAY1
+SW/Push2    SWNOWAY2
+$random  SW/PUSH { SW/Push1 SW/Push1 SW/Push1 SW/Push1 SW/Push1 SW/Push1 SW/Push1 SW/Push1 SW/Push1 SW/Push1 SW/Push1 SW/Push1 SW/Push2 }
 
 SW/Sing1			SWSING1
 SW/Sing2			SWSING2
@@ -173,10 +168,10 @@ $playeralias	LoWang	 male	*pain50			SWPAIN50
 $playeralias	LoWang	 male	*pain25			SWPAIN25
 $playersound	LoWang	 male	*land			SPLAND0
 $playeralias	LoWang	 male	*usefail		SW/PUSH
-$playersound	LoWang	 male	*puzzfail		GRUNT06
+$playersound	LoWang	 male	*puzzfail		SW/Push1
 $playeralias	LoWang	 male	*grunt			SW/MinorHurt2
 $playeralias	LoWang	 male	*taunt			LoWang/Sing
-$playeralias   	LoWang   male   *drown          SW/Drown
+$playersound   	LoWang   male   *drown          SWDROWN
 $Playersound	LoWang	 male   *surface		SWSURFAC
 $playersound    LoWang   male   *poison     	SWPOISON
 
@@ -208,9 +203,7 @@ SW/KillTaunt25	SWKILL25
 SW/KillTaunt26	SWKILL26
 SW/KillTaunt27	SWKILL27
 SW/KillTaunt28	SWKILL28
-SW/KillTaunt29  SWKILL29
-SW/KillTaunt30	SWKILL30
-$Random LoWang/TauntKill { SW/KillTaunt1 SW/KillTaunt2 SW/KillTaunt3 SW/KillTaunt4 SW/KillTaunt5 SW/KillTaunt6 SW/KillTaunt7 SW/KillTaunt8 SW/KillTaunt9 SW/KillTaunt10 SW/KillTaunt11 SW/KillTaunt12 SW/KillTaunt13 SW/KillTaunt14 SW/KillTaunt15 SW/KillTaunt16 SW/KillTaunt17 SW/KillTaunt18 SW/KillTaunt19 SW/KillTaunt20 SW/KillTaunt21 SW/KillTaunt22 SW/KillTaunt23 SW/KillTaunt24 SW/KillTaunt25 SW/KillTaunt26 SW/KillTaunt27 SW/KillTaunt28 SW/KillTaunt29 SW/KillTaunt30 }
+$Random LoWang/TauntKill { SW/KillTaunt1 SW/KillTaunt2 SW/KillTaunt3 SW/KillTaunt4 SW/KillTaunt5 SW/KillTaunt6 SW/KillTaunt7 SW/KillTaunt8 SW/KillTaunt9 SW/KillTaunt10 SW/KillTaunt11 SW/KillTaunt12 SW/KillTaunt13 SW/KillTaunt14 SW/KillTaunt15 SW/KillTaunt16 SW/KillTaunt17 SW/KillTaunt18 SW/KillTaunt19 SW/KillTaunt20 SW/KillTaunt21 SW/KillTaunt22 SW/KillTaunt23 SW/KillTaunt24 SW/KillTaunt25 SW/KillTaunt26 SW/KillTaunt27 SW/KillTaunt28 }
 
 SW/GibTaunt1	SWGIBD01
 SW/GibTaunt2	SWGIBD02
@@ -230,7 +223,8 @@ SW/GibTaunt15	SWGIBD15
 SW/GibTaunt16	SWGIBD16
 SW/GibTaunt17	SWGIBD17
 SW/GibTaunt18	SWGIBD18
-$Random	LoWang/TauntGib { SW/GibTaunt1 SW/GibTaunt2 SW/GibTaunt3 SW/GibTaunt4 SW/GibTaunt5 SW/GibTaunt6 SW/GibTaunt7 SW/GibTaunt8 SW/GibTaunt9 SW/GibTaunt10 SW/GibTaunt11 SW/GibTaunt12 SW/GibTaunt13 SW/GibTaunt14 SW/GibTaunt15 SW/GibTaunt16 SW/GibTaunt17 SW/GibTaunt18 }
+SW/GibTaunt19	SWGIBD19
+$Random	LoWang/TauntGib { SW/GibTaunt1 SW/GibTaunt2 SW/GibTaunt3 SW/GibTaunt4 SW/GibTaunt5 SW/GibTaunt6 SW/GibTaunt7 SW/GibTaunt8 SW/GibTaunt9 SW/GibTaunt10 SW/GibTaunt11 SW/GibTaunt12 SW/GibTaunt13 SW/GibTaunt14 SW/GibTaunt15 SW/GibTaunt16 SW/GibTaunt17 SW/GibTaunt18 SW/GibTaunt19 LoWang/Haha }
 
 SW/WeaponTaunt1 SWWEPN1
 SW/WeaponTaunt2 SWWEPN2
@@ -238,7 +232,8 @@ SW/WeaponTaunt3 SWWEPN3
 SW/WeaponTaunt4 SWWEPN4
 SW/WeaponTaunt5 SWWEPN5
 SW/WeaponTaunt6 SWWEPN6
-$Random LoWang/WeaponTaunt { SW/WeaponTaunt1 SW/WeaponTaunt2 SW/WeaponTaunt3 SW/WeaponTaunt4 SW/WeaponTaunt5 SW/WeaponTaunt6 }
+SW/WeaponTaunt7 SWWEPN7
+$Random LoWang/WeaponTaunt { SW/WeaponTaunt1 SW/WeaponTaunt2 SW/WeaponTaunt3 SW/WeaponTaunt4 SW/WeaponTaunt5 SW/WeaponTaunt6 SW/WeaponTaunt7 }
 
 
 SW/Intro1		SWNTRO01
@@ -254,8 +249,7 @@ SW/Intro10		SWNTRO10
 SW/Intro11		SWNTRO11
 SW/Intro12		SWNTRO12
 SW/Intro13		SWNTRO13
-SW/Intro14		SWNTRO14
-$Random LoWang/Enter { SW/Intro1 SW/Intro2 SW/Intro3 SW/Intro4 SW/Intro5 SW/Intro6 SW/Intro7 SW/Intro8 SW/Intro9 SW/Intro10 SW/Intro11 SW/Intro12 SW/Intro13 SW/Intro14 }
+$Random LoWang/Enter { SW/Intro1 SW/Intro2 SW/Intro3 SW/Intro4 SW/Intro5 SW/Intro6 SW/Intro7 SW/Intro8 SW/Intro9 SW/Intro10 SW/Intro11 SW/Intro12 SW/Intro13 }
 
 LoWang/Boss1	SWBSST1
 LoWang/Boss2	SWBSST2
@@ -268,13 +262,13 @@ SPWAIT23 SPWAIT23
 HIRO032	 HIRO032
 
 SW/TauntFist        SWKUNGFU
-$random LoWang/FistTaunt { SW/TauntFist SW/KillTaunt8 SW/KillTaunt9 SW/KillTaunt10 SW/GibTaunt9 }
+$random LoWang/FistTaunt { SW/TauntFist SW/KillTaunt7 SW/KillTaunt8 SW/KillTaunt9 SW/GibTaunt9 }
 
 SW/SwrdKill1        SWSLICE1
 SW/SwrdKill1        SWSLICE2
 SW/SwrdKill3        SWSLICE3
 SW/SwrdKill4        SWSLICE4
-$Random LoWang/Split { SW/SwrdKill1 SW/SwrdKill2 SW/SwrdKill3 SW/SwrdKill4 SW/KillTaunt8 }
+$Random LoWang/Split { SW/SwrdKill1 SW/SwrdKill2 SW/SwrdKill3 SW/SwrdKill4 SW/KillTaunt7 }
 
 Item/SWpickup		SWPICKUP
 Item/SWpickupbig	SWBGITEM

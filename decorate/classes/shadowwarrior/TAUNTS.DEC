@@ -159,22 +159,6 @@ Actor LoWangStickyTaunt : LoWangTaunt {
     }
 }
 
-Actor LoWangHeartTaunt : LoWangTaunt { 
-  States {
-	Pickup:
-		TNT1 A 0 A_JumpIfInventory("SWClass", 1, "ActuallyLoWang")
-		stop
-	
-	ActuallyLowang:
-        TNT1 A 0 A_JumpIfInventory("LoWangTauntCooldown", 1, "UseStop")
-		TNT1 A 0 A_JumpIfInventory("SamsaraBallgag", 1, "UseStop")
-        TNT1 A 0 A_PlaySound("LoWang/HeartTaunt", CHAN_VOICE)
-        TNT1 A 0 A_GiveInventory("LoWangTauntCooldown", 5)
-		TNT1 A 0 ACS_NamedExecuteAlways("LoWangTauntCooldown")
-        stop
-    }
-} 
-
 Actor LoWangFlirtTaunt : LoWangTaunt
 {
   States {
