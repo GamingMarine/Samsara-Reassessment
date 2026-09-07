@@ -369,7 +369,7 @@ Script "Samsara2689" (void)  //2689
 					else if(randompick<=24)
 						SpawnSpotFacing("SW_MechanicGirl", 0, 0);
 					else if(randompick<=48)
-						SpawnSpotFacing("SW_CarGirl", 0, 0);
+						SpawnSpotFacing("SW_CarGirlSpawner", 0, 0);
 					else if(randompick<=72)
 						SpawnSpotFacing("SW_MoonGirl", 0, 0);
 					else if(randompick<=160)

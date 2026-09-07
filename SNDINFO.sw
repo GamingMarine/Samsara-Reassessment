@@ -331,6 +331,12 @@ sw/moongirl/talk3		"Sounds/ShadowWarrior/Randoms/SW_LANI066.flac"
 
 sw/moongirl/gift		"Sounds/ShadowWarrior/Randoms/SW_LANI060.wav"
 
+$random sw/secretary/talk { sw/secretary/talk1 sw/secretary/talk2 sw/secretary/talk3 sw/secretary/talk4 }
+sw/secretary/talk1		"Sounds/ShadowWarrior/Randoms/WT_LANI049.wav"
+sw/secretary/talk2		"Sounds/ShadowWarrior/Randoms/WT_LANI051.wav"
+sw/secretary/talk3		"Sounds/ShadowWarrior/Randoms/WT_LANI052.wav"
+sw/secretary/talk4		"Sounds/ShadowWarrior/Randoms/WT_LANI054.wav"
+
 $Random	LoWang/Eww { LoWang/Eww1 LoWang/Eww2 LoWang/Eww3 LoWang/Eww4 LoWang/Eww5 }
 LoWang/Eww1		SWGROSS1
 LoWang/Eww2		SWGROSS2

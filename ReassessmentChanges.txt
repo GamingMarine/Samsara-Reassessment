@@ -48,6 +48,7 @@ Shadow Warrior:
 -(WIP) Lo Wang's voice clips have been completely overhauled, recontextualizing pre-existing dialogue and implementing previously unused behavior.
 -The uzi and missile launcher are now animated in TEXTURES.
 -(WIP) Randoms now retaliate when shot at.
+-Zilla's secretary from Wanton Destruction can now spawn as a random character.
 
 PowerSlave/Exhumed:
 -Class now uses non-upscaled sound effects.
