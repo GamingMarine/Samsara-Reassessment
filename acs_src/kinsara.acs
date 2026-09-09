@@ -242,7 +242,8 @@ script "SecretNotifierDisplay" (int sfound, int stotal) CLIENTSIDE
         }
     } else if (CheckInventory("SWClass")) {
         AmbientSound("LoWang/Secret", 127);
-        Print(l:"SECRETFOUND_DEFAULT");
+        SetHudSize(400, 300, 0);
+        HudMessage(l:"SECRETFOUND_SHADOWWARRIOR"; HUDMSG_PLAIN, 1, CR_LIGHTBLUE, 200.4, 75.0, 3.0);
     } else if (CheckInventory("CMClass")) {
         AmbientSound("CYBERM_SECRET1", 127);
         Log(l:"SECRETFOUND_DEFAULT");

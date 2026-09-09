@@ -66,14 +66,16 @@ Actor " .454 Casull Pistol " : RRWeapon
             TNT1 A 0 A_JumpIfInventory("Clip",1,"Reload")
             goto NoAmmoSwitch
         FireStart:
-			RRP_ C 2 Bright A_AlertMonsters
+            TNT1 A 0 A_AlertMonsters
+			RRP_ C 2 Bright A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
 			TNT1 A 0 A_GiveInventory("SamsaraLeonardPistolAttackHandler")
 		A:	
-			RRP_ DEFG 3 Bright
-			RRP_ H 4 Bright
-			RRP_ G 3 Bright
-			RRP_ F 2 Bright
-			RRP_ EI 1 Bright
+			RRP_ D 3 Bright A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+            RRP_ EFG 3 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+			RRP_ H 4 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+			RRP_ G 3 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+			RRP_ F 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+			RRP_ EI 1 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
             TNT1 A 0 A_JumpIfInventory("SamsaraReloadMode",2,"AReloadable")
             goto AFinish
         AReloadable:
@@ -86,22 +88,22 @@ Actor " .454 Casull Pistol " : RRWeapon
             TNT1 A 0 A_JumpIfInventory("Clip",1,"Reload")
             goto AFinish
         AFinish:
-			RRP_ B 2 Bright
+			RRP_ B 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
 			goto Ready
 		Reload:
 			TNT1 A 0 A_PlaySound("Leonard/PistolR",CHAN_WEAPON)
-			RRP_ I 2 Bright A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)
-			RRP_ J 1 Bright A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)
-			RRP_ J 2 offset(-8,50) Bright A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)
-			RRP_ J 2 offset(-13,63) Bright A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)
-			RRP_ K 2 offset(-18,76) Bright A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)
-			RRP_ K 2 offset(-23,89) Bright A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)
+			RRP_ I 2 A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)
+			RRP_ J 1 A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)
+			RRP_ J 2 offset(-8,50) A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)
+			RRP_ J 2 offset(-13,63) A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)
+			RRP_ K 2 offset(-18,76) A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)
+			RRP_ K 2 offset(-23,89) A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)
 			TNT1 A 0 A_PlaySound("Leonard/PistolU",CHAN_WEAPON)
-			RRP_ K 2 offset(-18,76) Bright A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)			
-			RRP_ J 2 offset(-13,63) Bright A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)
-			RRP_ J 2 offset(-8,50) Bright A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)		
-			RRP_ J 1 offset(0,37) Bright A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)			
-			RRP_ I 2 Bright A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)			
+			RRP_ K 2 offset(-18,76) A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)			
+			RRP_ J 2 offset(-13,63) A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)
+			RRP_ J 2 offset(-8,50) A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)		
+			RRP_ J 1 offset(0,37) A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)			
+			RRP_ I 2 A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)			
             TNT1 A 0 A_JumpIfInventory("SamsaraReloadMode",2,"ReloadAmmo")
         ReloadFinish:
             //RRP_ B 1 Bright A_WeaponReady(WRF_NOBOB|WRF_NOFIRE|WRF_NOSWITCH)

@@ -49,17 +49,21 @@ Shadow Warrior:
 -The uzi and missile launcher are now animated in TEXTURES.
 -(WIP) Randoms now retaliate when shot at.
 -Zilla's secretary from Wanton Destruction can now spawn as a random character.
+-Added a unique message for finding a secret.
+
+CyberMage:
+-Class now uses non-upscaled sound effects.
+-Fixed several sounds having audible clicks in them.
+-Removed some unused sound effects.
+-Changed the weapon pickup sound to be from Crusader. Still not the correct game, but it's Origin, so I'd say it fits better.
 
 PowerSlave/Exhumed:
 -Class now uses non-upscaled sound effects.
 -Fixed several sounds having audible clicks in them.
 -Weapon viewbobbing has been tweaked.
 
-CyberMage:
--Class now uses non-upscaled sound effects.
--Fixed several sounds having audible clicks in them.
--Removed some unused sound effects.
--Changed the weapon pickup sound to be from Crusader. Still not the correct game, but it's Origin, so I'd say it matches.
+Redneck Rampage
+-Weapons will now viewbob while firing.
 
 Return to Castle Wolfenstein:
 -Weapon viewbobbing has been tweaked.

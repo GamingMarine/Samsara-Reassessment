@@ -33,10 +33,10 @@ Actor " RR Crowbar " : RRWeapon
             TNT1 A 0 A_JumpIfInventory("RRDrunkToken", 1, "SetDrunkViewFire")
             Goto SetSoberViewFire
             TNT1 A 0 A_PlaySound("RR/CrowbarS",CHAN_WEAPON)
-            RR_C BCD 3 Bright
-            RR_C EF 2 Bright
-            RR_C G 3 Bright A_GiveInventory("SamsaraRedneckRampageCrowbarAttackHandler")
-            RR_C H 2 Bright
+            RR_C BCD 3 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+            RR_C EF 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+            RR_C G 3 A_GiveInventory("SamsaraRedneckRampageCrowbarAttackHandler")
+            RR_C H 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
             Goto Ready
         IntroTaunt:
             TNT1 A 0 A_JumpIfInventory("SamsaraBallgag",1,2)
