@@ -433,7 +433,7 @@ Actor SoF_MPGLaserProjectile : FastProjectile
     +HITTRACER
     +DONTBLAST
     +NOTIMEFREEZE
-    +NOPAIN // eh?
+    +PAINLESS
     +NODAMAGETHRUST
     States
     {
