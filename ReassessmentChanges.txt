@@ -1,5 +1,6 @@
 General:
 -Changed the name of the maximum jump height option value to something a little less insensitive.
+-Added a unique Outlaws-themed quit message.
 
 For developers:
 -Refactored all cases of folders with differing capitalization, to allow the pk3 builder to work under Linux.
@@ -20,6 +21,7 @@ Duke Nukem 3D:
 
 Blood:
 -Weapon viewbobbing has been tweaked.
+-(WIP) Caleb's voice clips have been completely overhauled.
 
 Strife:
 -Added a new taunting sound, taken from the 1995 prototype.
@@ -41,6 +43,8 @@ Witchaven:
 
 Half-Life:
 -Fixed spent 9mm casings incorrectly making Shadow Warrior sounds.
+-(WIP) Revamped the HEV diagonistic voice clips.
+-The HEV suit now announces when you pick up the long-jump module. This was already programmed in Reincarnation, but the defined sound didn't exist.
 
 Shadow Warrior:
 -The guardian head's viewbobbing has been tweaked.

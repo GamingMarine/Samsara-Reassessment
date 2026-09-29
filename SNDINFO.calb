@@ -51,36 +51,59 @@ $Random Caleb/Bored { Caleb/Bored1 Caleb/Bored2 Caleb/Bored3 Caleb/Bored4 Caleb/
 					  Caleb/BoredD Caleb/BoredE Caleb/BoredF Caleb/BoredG Caleb/BoredH Caleb/BoredI
 					  Caleb/BoredJ Caleb/BoredK Caleb/BoredL Caleb/BoredM }
 
-Caleb/KillTaunt1	CALKTNT1
-Caleb/KillTaunt2	CALKTNT2
-Caleb/KillTaunt3	CALKTNT3
-Caleb/KillTaunt4	CALKTNT4
-Caleb/KillTaunt5	CALKTNT5
-Caleb/KillTaunt6	CALKTNT6
-Caleb/KillTaunt7	CALKTNT7
-Caleb/KillTaunt8	CALKTNT8
-Caleb/KillTaunt9	CALKTNT9
-Caleb/KillTaunt10	CALKTN10
-Caleb/KillTaunt11	CALKTN11
-Caleb/KillTaunt12	CALKTN12
-Caleb/KillTaunt13	CALKTN13
-Caleb/KillTaunt14	CALKTN14
-Caleb/KillTaunt15	CALKTN15
-Caleb/KillTaunt16	CALKTN16
-Caleb/KillTaunt17	CALKTN17
-Caleb/KillTaunt18	CALKTN18
-Caleb/KillTaunt19	CALKTN19
-Caleb/KillTaunt20	CALKTN20
-Caleb/KillTaunt21	CALKTN21
-Caleb/KillTaunt22	CALKTN22
-Caleb/KillTaunt23	CALKTN23
-Caleb/KillTaunt24	CALKTN24
-Caleb/KillTaunt25	CALKTN25
-Caleb/KillTaunt26	CALKTN26
+Caleb/KillTaunt1	CALKIL01
+Caleb/KillTaunt2	CALKIL02
+Caleb/KillTaunt3	CALKIL03
+Caleb/KillTaunt4	CALKIL04
+Caleb/KillTaunt5	CALKIL05
+Caleb/KillTaunt6	CALKIL06
+Caleb/KillTaunt7	CALKIL07
+Caleb/KillTaunt8	CALKIL08
+Caleb/KillTaunt9	CALKIL09
+Caleb/KillTaunt10	CALKIL10
+Caleb/KillTaunt11	CALKIL11
+Caleb/KillTaunt12	CALKIL12
+Caleb/KillTaunt13	CALKIL13
+Caleb/KillTaunt14	CALKIL14
+Caleb/KillTaunt15	CALKIL15
+Caleb/KillTaunt16	CALKIL16
+Caleb/KillTaunt17	CALKIL17
+Caleb/KillTaunt18	CALKIL18
+Caleb/KillTaunt19	CALKIL19
+Caleb/KillTaunt20	CALKIL20
+Caleb/KillTaunt21	CALKIL21
+Caleb/KillTaunt22	CALKIL22
+Caleb/KillTaunt23	CALKIL23
+Caleb/KillTaunt24	CALKIL24
+Caleb/KillTaunt25	CALKIL25
+Caleb/KillTaunt26	CALKIL26
+Caleb/KillTaunt27	CALKIL27
+Caleb/KillTaunt28	CALKIL28
+Caleb/KillTaunt29	CALKIL29
+Caleb/KillTaunt30	CALKIL30
+Caleb/KillTaunt31	CALKIL31
+Caleb/KillTaunt32	CALKIL32
+Caleb/KillTaunt33	CALKIL33
+Caleb/KillTaunt34	CALKIL34
+Caleb/KillTaunt35	CALKIL35
+Caleb/KillTaunt36	CALKIL36
+Caleb/KillTaunt37	CALKIL37
+Caleb/KillTaunt38	CALKIL38
+Caleb/KillTaunt39	CALKIL39
+Caleb/KillTaunt40	CALKIL40
+Caleb/KillTaunt41	CALKIL41
+Caleb/KillTaunt42	CALKIL42
+Caleb/KillTaunt43	CALKIL43
+Caleb/KillTaunt44	CALKIL44
+Caleb/KillTaunt45	CALKIL45
+Caleb/KillTaunt46	CALKIL46
+Caleb/KillTaunt47	CALKIL47
+Caleb/KillTaunt48	CALKIL48
+Caleb/KillTaunt49	CALKIL49
+Caleb/KillTaunt50	CALKIL50
+Caleb/KillTaunt51	CALKIL51
 
-$Random Caleb/KillTaunt { Caleb/KillTaunt1 Caleb/KillTaunt2 Caleb/KillTaunt1 Caleb/KillTaunt3 Caleb/KillTaunt4 Caleb/KillTaunt5 Caleb/KillTaunt6 Caleb/KillTaunt7 Caleb/KillTaunt8 Caleb/KillTaunt9 Caleb/KillTaunt10
-						  Caleb/KillTaunt11 Caleb/KillTaunt12 Caleb/KillTaunt13 Caleb/KillTaunt14 Caleb/KillTaunt15 Caleb/KillTaunt16 Caleb/KillTaunt17 Caleb/KillTaunt18 Caleb/KillTaunt19 Caleb/KillTaunt20 
-						  Caleb/KillTaunt21 Caleb/KillTaunt22 Caleb/KillTaunt23 Caleb/KillTaunt24 Caleb/KillTaunt25 Caleb/KillTaunt26 }
+$Random Caleb/KillTaunt { Caleb/KillTaunt1 Caleb/KillTaunt2 Caleb/KillTaunt1 Caleb/KillTaunt3 Caleb/KillTaunt4 Caleb/KillTaunt5 Caleb/KillTaunt6 Caleb/KillTaunt7 Caleb/KillTaunt8 Caleb/KillTaunt9 Caleb/KillTaunt10 Caleb/KillTaunt11 Caleb/KillTaunt12 Caleb/KillTaunt13 Caleb/KillTaunt14 Caleb/KillTaunt15 Caleb/KillTaunt16 Caleb/KillTaunt17 Caleb/KillTaunt18 Caleb/KillTaunt19 Caleb/KillTaunt20 Caleb/KillTaunt21 Caleb/KillTaunt22 Caleb/KillTaunt23 Caleb/KillTaunt24 Caleb/KillTaunt25 Caleb/KillTaunt26 Caleb/KillTaunt27 Caleb/KillTaunt28 Caleb/KillTaunt29 Caleb/KillTaunt30 Caleb/KillTaunt31 Caleb/KillTaunt32 Caleb/KillTaunt33 Caleb/KillTaunt34 Caleb/KillTaunt35 Caleb/KillTaunt36 Caleb/KillTaunt37 Caleb/KillTaunt38 Caleb/KillTaunt39 Caleb/KillTaunt40 Caleb/KillTaunt41 Caleb/KillTaunt42 Caleb/KillTaunt43 Caleb/KillTaunt44 Caleb/KillTaunt45 Caleb/KillTaunt46 Caleb/KillTaunt47 Caleb/KillTaunt48 Caleb/KillTaunt49 Caleb/KillTaunt50 Caleb/KillTaunt51 }
 
 Caleb/PariasKill1	KILLPAR1
 Caleb/PariasKill2	KILLPAR2
@@ -117,21 +140,37 @@ Caleb/TauntA		CALTNTA
 Caleb/TauntB		CALTNTB
 $Random Caleb/Taunt { Caleb/Taunt1 Caleb/Taunt2 Caleb/Taunt3 Caleb/Taunt4 Caleb/Taunt5 Caleb/Taunt6 Caleb/Taunt7 Caleb/Taunt8 Caleb/Taunt9 Caleb/Enter3 Caleb/TauntB }
 
-Caleb/Enter1		CALENTR1
-Caleb/Enter2		CALENTR2
-Caleb/Enter3		CALENTR3
-Caleb/Enter4		CALENTR4
-Caleb/Enter5		CALENTR5
-Caleb/Enter6		CALENTR6
-Caleb/Enter7		CALENTR7
-Caleb/Enter8		CALENTR8
-Caleb/Enter9		CALENTR9
-Caleb/EnterA		CALENTRA
-Caleb/EnterB		CALENTRB
-Caleb/EnterC		CALENTRC
-Caleb/EnterD		CALENTRD
+Caleb/Enter1		CALNTR01
+Caleb/Enter2		CALNTR02
+Caleb/Enter3		CALNTR03
+Caleb/Enter4		CALNTR04
+Caleb/Enter5		CALNTR05
+Caleb/Enter6		CALNTR06
+Caleb/Enter7		CALNTR07
+Caleb/Enter8		CALNTR08
+Caleb/Enter9		CALNTR09
+Caleb/Enter10		CALNTR10
+Caleb/Enter11		CALNTR11
+Caleb/Enter12		CALNTR12
+Caleb/Enter13		CALNTR13
+Caleb/Enter14		CALNTR14
+Caleb/Enter15		CALNTR15
+Caleb/Enter16		CALNTR16
+Caleb/Enter17		CALNTR17
+Caleb/Enter18		CALNTR18
+Caleb/Enter19		CALNTR19
+Caleb/Enter20		CALNTR20
+Caleb/Enter21		CALNTR21
+Caleb/Enter22		CALNTR22
+Caleb/Enter23		CALNTR23
+Caleb/Enter24		CALNTR24
+Caleb/Enter25		CALNTR25
+Caleb/Enter26		CALNTR26
+Caleb/Enter27		CALNTR27
+Caleb/Enter28		CALNTR28
+Caleb/Enter29		CALNTR29
 
-$Random Caleb/Enter { DSNONE Caleb/Enter1 Caleb/Enter2 DSNONE Caleb/Enter3 Caleb/Enter4 DSNONE Caleb/Enter5 Caleb/Enter6 DSNONE Caleb/Enter7 Caleb/Enter8 DSNONE Caleb/Enter9 Caleb/EnterA Caleb/KillEleena2 DSNONE Caleb/EnterC }
+$Random Caleb/Enter { Caleb/Enter1 Caleb/Enter2 Caleb/Enter3 Caleb/Enter4 Caleb/Enter5 Caleb/Enter6 Caleb/Enter7 Caleb/Enter8 Caleb/Enter9 Caleb/Enter10 Caleb/Enter11 Caleb/Enter12 Caleb/Enter13 Caleb/Enter14 Caleb/Enter15 Caleb/Enter16 Caleb/Enter17 Caleb/Enter18 Caleb/Enter19 Caleb/Enter20 Caleb/Enter21 Caleb/Enter22 Caleb/Enter23 Caleb/Enter24 Caleb/Enter25 Caleb/Enter26 Caleb/Enter27 Caleb/Enter28 Caleb/Enter29 }
 
 Caleb/BossSee1		CALBTUN1
 Caleb/BossSee2		CALBTUN2
