@@ -82,13 +82,13 @@ script "SamsaraDecorate" (int choice, int arg1, int arg2) //215 - SAMSARA_DECORA
         {
             /*if (isLMS() || GetCVar("samsara_lmsrules"))
             {
-                if (GetCVar("samsara_permaquad")) { GiveInventory("QuadDamageItem", 1); }
+                if (GetCVar("samsara_permaquad")) { GiveInventory("SamsaraQuakeQuadDamageItem", 1); }
                 break;
             }*/
 
             GiveQuad(arg1);
 
-            if (GetCVar("samsara_permaquad")) { GiveInventory("QuadDamageItem", 1); }
+            if (GetCVar("samsara_permaquad")) { GiveInventory("SamsaraQuakeQuadDamageItem", 1); }
         }
         break;
 
@@ -1893,7 +1893,12 @@ Script "Samsara_KillCount" (int override)
             else
             {
                 int presentTid = UniqueTid();
-                int presentScale = 0.25 + ((health >= 200) * 0.175) + ((health >= 1000) * 0.175) + ((health >= 2500) * 0.175) + ((health >= 5000) * 0.175);
+                int presentScale = 0.25;
+
+                if (health >= (isBoss ? GetCVar("samsara_pinatapartybosshealthtier5") : GetCVar("samsara_pinatapartyhealthtier5"))) { presentScale += 0.7; }
+                else if (health >= (isBoss ? GetCVar("samsara_pinatapartybosshealthtier4") : GetCVar("samsara_pinatapartyhealthtier4"))) { presentScale += 0.525; }
+                else if (health >= (isBoss ? GetCVar("samsara_pinatapartybosshealthtier3") : GetCVar("samsara_pinatapartyhealthtier3"))) { presentScale += 0.35; }
+                else if (health >= (isBoss ? GetCVar("samsara_pinatapartybosshealthtier2") : GetCVar("samsara_pinatapartyhealthtier2"))) { presentScale += 0.175; }
 
                 if (GetCVar("samsara_merrychristmas")) { SpawnForced("SamsaraPinataPartyXmasGift", x, y, z, presentTid); }
                 else { SpawnForced("SamsaraPinataPartyPerformanceContainer", x, y, z, presentTid); }
@@ -2232,7 +2237,30 @@ Script "Samsara_Laser" (int type, int space, int height) clientside
 //													Inventory Reset
 //======================================================================================================================
 
-Script "Samsara_ResetInventory" (void)
+Script "Samsara_ResetHealth" (int takexp)
+{
+	// Grondoval and Demoness require special treatment for starting with the correct amount of health.
+	int pln = PlayerNumber();
+	switch(PlayerClass(pln))
+	{
+		case CLASS_WITCHAVEN:
+			SetActorProperty (0, APROP_Health, 100 + (takexp ? 0 : CheckInventory("SamsaraWitchavenHealthIncrease")));
+			SetActorProperty (0, APROP_SpawnHealth, 100 + (takexp ? 0 : CheckInventory("SamsaraWitchavenHealthIncrease")));
+			break;
+
+		case CLASS_DEMONESS:
+			SetActorProperty (0, APROP_Health, 70 + (takexp ? 0 : CheckInventory("Hexen2HealthAdd")));
+			SetActorProperty (0, APROP_SpawnHealth, 70 + (takexp ? 0 : CheckInventory("Hexen2HealthAdd")));
+			break;
+
+		default:
+			SetActorProperty (0, APROP_Health, 100);
+			SetActorProperty (0, APROP_SpawnHealth, 100);
+			break;
+	}
+}
+
+Script "Samsara_ResetInventory" (int takexp)
 {
 	int pln = PlayerNumber();
 	ClearInventory();
@@ -2336,6 +2364,12 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("DGStrHasPlasmaRepeater", INTMAX);
 			TakeInventory("DGStrHasWPK", INTMAX);
 			SetInventory("SamsaraPermaWeaponLevel2ToggleMemory", 1);
+
+			if (!CheckInventory("SamsaraDoom64StartingUnmakerArtifactsGiven"))
+			{
+				if (GetCVar("samsara_unmakerartifacts") > 0 && !CheckInventory("SamsaraDoomguyInDoom64CE")) { GiveInventory("SamsaraDoom64UnmakerArtifact", GetCVar("samsara_unmakerartifacts")); }
+				SetInventory("SamsaraDoom64StartingUnmakerArtifactsGiven", 1);
+			}
 
 			GiveInventory(" Pistol ", 1);
 			GiveInventory(" Fist ", 1);
@@ -2640,7 +2674,7 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("Nailgun DOE", INTMAX);
 			TakeInventory("Q1AssaultCannon", INTMAX);
             SetInventory("AC_FiredOnce", 0);
-			TakeInventory("QuadDamageItem", INTMAX);
+			TakeInventory("SamsaraQuakeQuadDamageItem", INTMAX);
 			TakeInventory("Thunderbolt", INTMAX);
 			TakeInventory("Thunderbolt DOE", INTMAX);
 			TakeInventory("Rocket Powered Impaler", INTMAX);
@@ -2776,6 +2810,32 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("AccuracyUpgrade1", INTMAX);
 			TakeInventory("AccuracyUpgrade2", INTMAX);
 
+			if (!CheckInventory("StrifeguyStartingUpgradesHasBeenGiven"))
+			{
+				if (!(isLMS() || GetCVar("samsara_lmsrules")) || ((isLMS() || GetCVar("samsara_lmsrules")) && !GetCVar("samsara_lmsuniques")))
+				{
+					int sup = GetCVar("samsara_strifeupgrades");
+					int supdone = 0;
+
+					if (sup > 10) { sup = 10; }
+					else if (sup < 0) { sup = 0; }
+
+					while (supdone < sup)
+					{
+						GiveInventory("StaminaUpgradeDamage", 10);
+						GiveInventory("AccuracyUpgrade1", 10);
+						GiveInventory("AccuracyUpgrade2", 10);
+
+						ACS_NamedExecuteWithResult("SamsaraPlayerSpawnHealthAdjust", 10, 1, 7, 100);
+						ACS_NamedExecuteWithResult("SamsaraPlayerHealer");
+
+						supdone++;
+					}
+				}
+
+				GiveInventory("StrifeguyStartingUpgradesHasBeenGiven", 1);
+			}
+
 			GiveInventory("IsSamsaraClass", 1);
 			GiveInventory("StrifeClass", 1);
 			GiveInventory("Punch Dagger", 1);
@@ -2789,6 +2849,7 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory(" Arachnicator ", INTMAX);
 			TakeInventory("EradRovingMine", INTMAX);
 			TakeInventory("EradMiniTankDetonator", INTMAX);
+			TakeInventory("EradicatorPipAllowControl", INTMAX);
 			TakeInventory("  Sonic Shock  ", INTMAX);
 			TakeInventory("Death Bomb", INTMAX);
 			TakeInventory("Cluster Bomb", INTMAX);
@@ -2972,7 +3033,7 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("WTInvisibilityPhial", INTMAX);
 			TakeInventory("WTFireProofPhial", INTMAX);
 			
-			if (GetCvar("samsara_pistolstart") >= 2 && CheckInventory("PistolStartEnabled"))
+			if (takexp)
 			{
 				SetInventory("WTExperience", 0);
 				SetInventory("WTLevel", 1);
@@ -3182,7 +3243,7 @@ Script "Samsara_ResetInventory" (void)
 			SetInventory("SamsaraPermaWeaponLevel2ToggleMemory", 1);
 			TakeInventory("Hexen2ForceCube", INTMAX);
 
-			if (GetCvar("samsara_pistolstart") >= 2 && CheckInventory("PistolStartEnabled"))
+			if (takexp)
 			{
 				SetInventory("Hexen2Level", 1);
 				SetInventory("Hexen2Experience", 0);
@@ -3462,6 +3523,8 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("Painkiller_ArmorRegeneration", INTMAX);
 			TakeInventory("Painkiller_Fear", INTMAX);
 			TakeInventory("Painkiller_666Ammo", INTMAX);
+			TakeInventory("Painkiller_TarotMPUses", INTMAX);
+			TakeInventory("Painkiller_TarotUsage", INTMAX);
 			TakeInventory("Painkiller_GoldSlot1", INTMAX);
 			TakeInventory("Painkiller_GoldSlot2", INTMAX);
 			TakeInventory("Painkiller_GoldSlot3", INTMAX);
@@ -3492,6 +3555,8 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("Painkiller_GoldAmount", 999999);
 			SetInventory("Painkiller_GoldGiven", 0);
 			SetInventory("Clip", 0);
+
+			ACS_NamedExecuteWithResult("Painkiller_BlackTarotRestore");
 
 			SetInventory("Shell", 20);
 			SetInventory("Cell", 25);
@@ -3676,7 +3741,7 @@ Script "Samsara_ResetInventory" (void)
 			SetInventory("SamsaraDeusExGEPGunAmmoType", 0);
 			SetInventory("SamsaraDeusExPlasmaRifleAmmoType", 0);
 
-			if (GetCvar("samsara_pistolstart") >= 2 && CheckInventory("PistolStartEnabled"))
+			if (takexp)
 			{
 				TakeInventory("DeusEx_LowTechSkill", 4);
 				TakeInventory("DeusEx_PistolSkill", 4);
@@ -3690,10 +3755,11 @@ Script "Samsara_ResetInventory" (void)
 				TakeInventory("DeusEx_LowTechPoints", 99999);
 				TakeInventory("DeusEx_MedicinePoints", 99999);
 				TakeInventory("DeusEx_EnviroPoints", 99999);
+				TakeInventory("DeusEx_StartingSkills", 99999);
 				SetInventory("SamsaraDeusExStartingSkillsGiven", 0);
 			}
 
-			if (GetCvar("samsara_pistolstart") >= 2 && CheckInventory("PistolStartEnabled"))
+			if (takexp)
 			{
 				SetAmmoCapacity("DeusEx_GlockMagazine", 4);
 				SetAmmoCapacity("DeusEx_MiniXBowMagazine", 6);
@@ -3717,7 +3783,7 @@ Script "Samsara_ResetInventory" (void)
 			GiveInventory("DeusEx_SniperMagazine", GetAmmoCapacity("DeusEx_SniperMagazine"));
 			GiveInventory("DeusEx_StealthMagazine", GetAmmoCapacity("DeusEx_StealthMagazine"));
 
-			if (GetCvar("samsara_pistolstart") >= 2 && CheckInventory("PistolStartEnabled"))
+			if (takexp)
 			{
 				SetAmmoCapacity("DeusEx_GlockSpread", 120);
 				SetAmmoCapacity("DeusEx_XBowSpread", 40);
@@ -3765,6 +3831,20 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("DeusEx_Augmentation_EyeSlot",1);
 			TakeInventory("DeusEx_AugmentationUpgradeCannister",99);
 			TakeInventory("DeusEx_AugmentationBioEnergyCell",99);
+
+			if (!CheckInventory("SamsaraDeusExStartingSkillsGiven"))
+			{
+				if (isSinglePlayer() || isCoop())
+				{
+					if (GetCVar("samsara_deusexstartingskills") > 0) { SetInventory("DeusEx_StartingSkills", GetCVar("samsara_deusexstartingskills")); }
+				} else {
+					if (GetCVar("samsara_deusexstartingskills") >= 4) { SetInventory("DeusEx_StartingSkills", 4); }
+					else if (GetCVar("samsara_deusexstartingskills") >= 2) { SetInventory("DeusEx_StartingSkills", 3); }
+					else { SetInventory("DeusEx_StartingSkills", 1); }
+				}
+
+				SetInventory("SamsaraDeusExStartingSkillsGiven", 1);
+			}
 
 			GiveInventory("DeusEx_Augmentation_InfoLink",1);
 			GiveInventory("DeusEx_Augmentation_IFF",1);
@@ -4076,7 +4156,7 @@ script "Samsara_FillInventory" (void)
 			break;
 
 		case CLASS_QUAKE:
-			if (GetCVar("samsara_permaquad")) { GiveInventory("QuadDamageItem", 1); }
+			if (GetCVar("samsara_permaquad")) { GiveInventory("SamsaraQuakeQuadDamageItem", 1); }
 			break;
 
 		case CLASS_ROTT:
@@ -17157,7 +17237,7 @@ Script "DisableVoodooDoll" (void)
 		SetActorState(0,"DisableVoodooDoll",true);
 }
 
-str PinataItemActors[10][31] =
+str PinataItemActors[10][32] =
 {
     { // Common
         "Ammo1Small", "Ammo2Small", "HealPack0", "ArmorScrap", "HealPack1", "Ammo1Big", "Ammo2Big",
@@ -17202,22 +17282,22 @@ str PinataItemActors[10][31] =
     },
     { // Rare (Extras)
         "Ammo1Big", "Ammo2Big", "Ammo3Big", "Ammo4Big", "AmmoComboBig", "HealPack2",
-        "MaxHealPack0", "SamsaraAllmap", "SamsaraLesserTome", "SamsaraTeleportPickup",
-        "SamsaraFlightPickup", "SamsaraSpeedBootsPickup", "SamsaraTeleportOtherPickup",
-        "SamsaraSlotThreeNoStay", "SamsaraSlotFourNoStay", "SamsaraSlotFiveNoStay",
-        "SamsaraSlotSixNoStay", "SuperHealth", "ArmorPack2", "ArmorPack3",
+        "MaxHealPack0", "MaxArmorScrap", "SamsaraAllmap", "SamsaraLesserTome",
+        "SamsaraTeleportPickup", "SamsaraFlightPickup", "SamsaraSpeedBootsPickup",
+        "SamsaraTeleportOtherPickup", "SamsaraSlotThreeNoStay", "SamsaraSlotFourNoStay",
+        "SamsaraSlotFiveNoStay", "SamsaraSlotSixNoStay", "SuperHealth", "ArmorPack2", "ArmorPack3",
         "ArmorPackBonusHeavy", "SamsaraUniquePickupRandom", "SamsaraSlotFourSkulltagNoStay",
         "SamsaraSlotFiveSkulltagNoStay", "SamsaraSlotSixSkulltagNoStay", "AmmoBackpack",
         "PartialInvisibility", "MegaPack"
     },
     { // Epic (Extras)
         "Ammo1Big", "Ammo2Big", "Ammo3Big", "Ammo4Big", "AmmoComboBig", "HealPack2",
-        "MaxHealPack0", "SamsaraAllmap", "SamsaraLesserTome", "SamsaraTeleportPickup",
-        "SamsaraFlightPickup", "SamsaraSpeedBootsPickup", "SamsaraTeleportOtherPickup",
-        "SamsaraSlotSixNoStay", "SamsaraSlotSixSkulltagNoStay", "SamsaraUniquePickupRandom",
-        "SamsaraSpeedBooster", "SamsaraDefenseBooster", "SamsaraDamageBooster",
-        "SamsaraFullInvisibility", "SamsaraTimeFreeze", "SuperHealth", "ArmorPack3",
-        "ArmorPackBonusHeavy", "ArmorPack4", "SamsaraSlotSevenNoStay",
+        "MaxHealPack0", "MaxArmorScrap", "SamsaraAllmap", "SamsaraLesserTome",
+        "SamsaraTeleportPickup", "SamsaraFlightPickup", "SamsaraSpeedBootsPickup",
+        "SamsaraTeleportOtherPickup", "SamsaraSlotSixNoStay", "SamsaraSlotSixSkulltagNoStay",
+        "SamsaraUniquePickupRandom", "SamsaraSpeedBooster", "SamsaraDefenseBooster",
+        "SamsaraDamageBooster", "SamsaraFullInvisibility", "SamsaraTimeFreeze", "SuperHealth",
+        "ArmorPack3", "ArmorPackBonusHeavy", "ArmorPack4", "SamsaraSlotSevenNoStay",
         "SamsaraSlotSevenSkulltagNoStay", "AmmoBackpack", "PartialInvisibility", "MegaPack",
         "SamsaraRandomPowerup"
     },
@@ -17229,7 +17309,7 @@ str PinataItemActors[10][31] =
     },
 };
 
-int PinataItemChances[10][31] =
+int PinataItemChances[10][32] =
 {
     { // Common
         50, 50, 50, 50, 25, 10, 10, 5, 5
@@ -17253,11 +17333,11 @@ int PinataItemChances[10][31] =
         50, 50, 50, 50, 50, 50, 50, 40, 40, 40, 40, 25, 25, 25, 25, 10, 10, 10, 10, 5, 5, 5, 5, 2
     },
     { // Rare (Extras)
-        50, 50, 50, 50, 50, 30, 30, 25, 25, 25, 25, 25, 25, 25, 15, 15, 15, 15, 10, 10, 10, 5, 5,
+        50, 50, 50, 50, 50, 30, 30, 30, 25, 25, 25, 25, 25, 25, 25, 15, 15, 15, 15, 10, 10, 10, 5, 5,
         5, 5, 5, 2, 2
     },
     { // Epic (Extras)
-        75, 75, 75, 75, 50, 30, 30, 25, 25, 25, 25, 25, 25, 25, 15, 10, 10, 10, 5, 5, 5, 5, 5, 5,
+        75, 75, 75, 75, 50, 30, 30, 30, 25, 25, 25, 25, 25, 25, 25, 15, 10, 10, 10, 5, 5, 5, 5, 5, 5,
         5, 5, 5, 5, 5, 2, 2
     },
     { // Legendary (Extras)
@@ -18909,4 +18989,25 @@ script "SamsaraIceDeathScreenBlend" (void) CLIENTSIDE
 
     SetInventory("PowerSamsaraIceDeathBlendZDoom", 0);
     SetInventory("PowerSamsaraIceDeathBlendHexen", 0);
+}
+
+script "SamsaraEquipmentStartCall" (int type, int respawning)
+{
+    if ((type <= -1 || type == 0) && (isLMS() || GetCVar("samsara_lmsrules"))) { ApplyLMS(); }
+
+    if (type <= -1 || type == 1) { HandleBackpackSpawn(respawning); }
+
+    if (type <= -1 || type == 2)
+    {
+        for (int i = SLOT_FIST; i <= SLOT_BFG10K; i++) { HandleSlotSpawn(i, respawning); }
+    }
+
+    if (type <= -1 || type == 3) { HandleUniqueSpawn(respawning); }
+
+    if (type <= -1 || type >= 4)
+    {
+        int oldInstagib;
+        HandleInstagib(GetCVar("instagib") != oldInstagib);
+        oldInstagib = GetCVar("instagib");
+    }
 }

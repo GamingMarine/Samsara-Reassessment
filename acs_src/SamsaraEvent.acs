@@ -162,7 +162,7 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 	int strifeLastKillCount;
 	int strifeDead;
 	int sigilCounter, sigilCounterPartyMode;
-	int oldInstaGib;
+	int oldInstagib;
 	int pariasLastRepairTimer;
 	int toPTimer;
 	int speedmod;
@@ -262,8 +262,8 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
     HandleBackpackSpawn(respawning);
     for (i = SLOT_FIST; i <= SLOT_BFG10K; i++) { HandleSlotSpawn(i, respawning); }
 	HandleUniqueSpawn(respawning);
-	HandleInstagib(GetCvar("instagib") != oldInstagib);
-	oldInstagib = GetCvar("instagib");
+	HandleInstagib(GetCVar("instagib") != oldInstagib);
+	oldInstagib = GetCVar("instagib");
 
 	ACS_NamedExecuteAlways("SamsaraScheduled", 0, respawning,0,0);
 
@@ -272,7 +272,7 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 	case CLASS_DOOM:
 		if (!CheckInventory("SamsaraDoom64StartingUnmakerArtifactsGiven"))
 		{
-			if (GetCVar("samsara_unmakerartifacts") > 0 && !CheckInventory("SamsaraDoomguyInDoom64CE")) { SetInventory("SamsaraDoom64UnmakerArtifact", GetCVar("samsara_unmakerartifacts")); }
+			if (GetCVar("samsara_unmakerartifacts") > 0 && !CheckInventory("SamsaraDoomguyInDoom64CE")) { GiveInventory("SamsaraDoom64UnmakerArtifact", GetCVar("samsara_unmakerartifacts")); }
 			SetInventory("SamsaraDoom64StartingUnmakerArtifactsGiven", 1);
 		}
 
@@ -5446,6 +5446,27 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                 break;
 
 			case CLASS_SOF:
+				if (CheckInventory("SamsaraSOFFlameGunPrimaryFiringSoundCheck") && !CheckWeapon("SoF_Flamegun"))
+				{
+					StopSound(0, CHAN_WEAPON);
+
+					SetInventory("SamsaraSOFFlameGunPrimaryFiringSoundCheck", 0);
+				}
+
+				if (CheckInventory("SamsaraSOFMPGPrimaryFiringSoundCheck") && !CheckWeapon("SoF_MPG"))
+				{
+					StopSound(0, CHAN_WEAPON);
+
+					SetInventory("SamsaraSOFMPGPrimaryFiringSoundCheck", 0);
+				}
+
+				if (CheckInventory("SamsaraSOFSniperRifleZoomingSoundCheck") && !CheckWeapon("SoF_SniperRifle"))
+				{
+					StopSound(0, CHAN_5);
+
+					SetInventory("SamsaraSOFSniperRifleZoomingSoundCheck", 0);
+				}
+
                 if (CheckInventory("SoF_SniperScoped") && !CheckWeapon("SoF_SniperRifle")) { SetInventory("SoF_SniperScoped", 0); }
                 break;
 
@@ -5542,7 +5563,7 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
         SetInventory("SamsaraDoom64UnmakerArtifact2Icon", CheckInventory("UnmakerUpgrade2Icon"));
         SetInventory("SamsaraDoom64UnmakerArtifact3Icon", CheckInventory("UnmakerUpgrade3Icon"));
 
-        SetInventory("SamsaraUsingVerticalSpread", IsZDoom() && GetUserCVar(pln, "vertspread") && !GetCVar("sv_novertspread"));
+        SetInventory("SamsaraUsingVerticalSpread", (GetUserCVar(pln, "samsara_cl_vertspread") && GetCVar("samsara_vertspread") <= 0) || GetCVar("samsara_vertspread") >= 2);
 
         SetInventory("DoomNoBFGAim", (GetCVar("sv_nobfgaim") && isZDoom()) || (!GetCVar("sv_bfgfreeaim") && !isZDoom()));
 

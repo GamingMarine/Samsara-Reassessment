@@ -40,6 +40,8 @@ Doom:
 Fred Chexter (Chex Quest):
 
 ! The bootspoon sounds now play on the player's CHAN_WEAPON sound channel.
++ With "Vertical Bullet Spread" enabled, the Mini-Zorcher(s), Large Zorcher, Rapid Zorcher, and Ultra Rapid Zorcher now have a vertical spread of 3.125 (decreased from 3.5).
+- With "Vertical Bullet Spread" enabled, the Micro-Zorcher(s) now has a vertical spread of 3.875 (increased from 3.5).
 * Zorched players should no longer be crushed into gibs.
 * Enemy zorch sequences should no longer trigger Crash states.
 
@@ -47,9 +49,11 @@ Corvus (Heretic):
 
 ! The status bar HUD now shows the tempest wand and the Grim Ballista.
 ! The staff now has a sprite for the Compendium and the alternate HUD.
++ With "Vertical Bullet Spread" enabled, the dragon claw (unpowered) now has a vertical spread of 2.25 in PVP (decreased from 3.5).
 + The tempest wand now has hybrid pickup sprites.
 * Fixed the tempest wand (unpowered) not leaving decals (currently player only due to Zandronum limitations).
 * Fixed ally clones' firing pitch being reversed when using the tempest wand.
++ The Staff of D'Sparil (unpowered)'s lightning mode projectile now deals 75-600 direct damage in multiples of 75 (increased from 50-400 in multiples of 50).
 + The Grim Ballista now counts towards the Tome of Power's cooldown reduction.
 + Self-damage was not conducive to the Grim Ballista (unpowered)'s intended role. As a result, that property has been removed from its main projectile.
 ! When "Permanent Powered Weapons" is enabled, the Class Unique keybindings now toggle between unpowered and powered modes.
@@ -80,11 +84,13 @@ Hexen I:
 -Parias (Reincarnation)-
 
 ! Renamed some actor names and sound files to avoid name conflicts with other mods.
+* Armor repair for allies now properly respects the armor mode setting.
 * Fixed the ally version not playing sounds when gibbed.
 ! The mace of contrition now has a sprite for the Compendium and the alternate HUD.
 ! The bishop's shortsword now has widescreen sprites.
 * Fixed the improved PVE damage values not properly applying to the bishop's shortsword strong projectiles.
 + Originally intended to be Parias' slot 3 during Samsara Reincarnation's development, the wand of embers has been added as a loadout choice for the slot 3 equipment (samsara_cl_parias_slot3 1 (client) or samsara_parias_slot3 2 (server)).
++ Added dynamic lights to the firestorm's circling flames.
 
 -Parias (Classic)-
 
@@ -101,15 +107,19 @@ Hexen I:
 ! Jotunn's Flail's sprites have been touched up.
 ! The Hammer of Retribution now has a glow effect to it when it has ammo, similar to Baratus' other weapons.
 ! The Quietus will now only perform its melee attack at close range when the player has enough ammo for a ranged attack.
+- The Quietus' projectiles now deal 16-128 direct damage in multiples of 16 (decreased from 24-192 in multiples of 24).
++ The Quietus' projectiles now deal 128 splash damage (increased from 96).
 
 -All-
 
 * Fixed some sprite name conflicts with the players.
 * Fixed ice death translations being called on being killed by ice attacks.
 + The Tome of Power has been added as the first unique equipment!
++ Added dynamic lights to the disc of repulsion's blast effect.
 + The porkalator has been added as a loadout choice for the third unique equipment (samsara_cl_[parias/pariasclassic/daedolon/baratus]_unique3 1 (client) or samsara_[parias/pariasclassic/daedolon/baratus]_unique3 2 (server)).
 ! The mystic ambit incant is now given as a side item with all unique pickups.
 ! The icon of the defender now shows an icon when active.
++ Added dynamic lights to the banishment device's projectile.
 * Fixed the ally beacon not having a sprite.
 
 Duke Nukem 3D:
@@ -147,11 +157,31 @@ Security Officer (Marathon):
 ! Damage received from Ranger's Mjolnir (lightning) and thunderbolt now causes a white screen flash.
 ! Damage received from Strifeguy's mauler (both modes) and Strife's templar (ranged) now causes a chartreuse screen flash.
 ! The status bar HUD now shows the SPNKR-25 Auto Cannon.
-+ The fusion pistol primary fire bolts now deal 45-60 damage (vanilla; increased from 42-56) or 60-80 damage (improved; PVE only; increased from 45-60).
-+ The fusion pistol secondary fire bolts now deal 120-150 damage (vanilla; increased from 105-140) or 160-200 damage (improved; PVE only; increased from 120-150).
-* The fusion pistol's improved damage values in PVE are now taken into account when fired underwater.
-+ In PVE, the MA-75B Assault Rifle primary bullets now deal 10-16 damage (vanilla; increased from 9-15) or 10-18 damage (improved; increased from 10-16).
++ The fusion pistol primary fire bolts now deal 42-70 damage (vanilla; increased from 42-56) or 56-84 damage (improved; PVE only; increased from 45-60).
++ The fusion pistol secondary fire bolts now deal 126-154 damage (vanilla; increased from 105-140) or 154-210 damage (improved; PVE only; increased from 120-150).
+* The fusion pistol's improved damage values in PVE are now taken into account for its splash damage when fired underwater.
++ The fusion pistol overcharge now deals 560 splash damage across 280 map units (increased from 512 across 256 map units).
++ With vanilla weapon balance, the MA-75B Assault Rifle primary bullets now deal 10-16 damage in PVE (increased from 9-15).
+! With improved weapon balance, the MA-75B Assault Rifle primary bullets now deal 7-21 damage in PVE (changed from 10-16).
++ The MA-75B Assault Rifle secondary grenades now deal 7-56 direct damage in multiples of 7 (increased from 4-32 in multiples of 4).
++ The MA-75B Assault Rifle secondary grenades now deal 77-105 splash damage in PVP (increased from 70-90), 84-112 splash damage in PVE (vanilla; increased from 80-100), and 98-112 splash damage in PVE (improved; increased from 90-110).
++ The SPNKR-XP SSM Launcher now gives 6 rounds of Ammo 3 on pickup (increased from 2).
+- The SPNKR-XP SSM Launcher now takes 3 rounds of Ammo 3 to use (increased from 1).
+! The TOZT-7 Napalm Unit now deals 7-14 damage in PVE (changed from 8-12).
+! In PVP, the SPNKR-25 Auto Cannon now deals 98-196 damage in increments of 7 (changed from 140-168 in increments of 7).
++ In PVE, the SPNKR-25 Auto Cannon's laser is now seven shots stacked on top of each other that each do 28-42 damage in increments of 7 for a total damage of 196-294 (increased from one shot that deals 140-168 damage in increments of 7).
+! The explosion from the ONI-71 Wave Motion Cannon primary beam (level 2) now deals 385-770 splash damage in PVE (changed from 525-630).
+! The main explosion from the ONI-71 Wave Motion Cannon primary beam (level 3) now deals 420-840 splash damage (changed from 560-700 in PVP if "Marathon: Full Radius Explosions" is disabled, as well as PVE regardless of that setting).
++ The main explosion from the ONI-71 Wave Motion Cannon primary beam (level 3) now deals 420-840 splash damage in PVP if "Marathon: Full Radius Explosions" is enabled (increased from 390-630).
++ The smaller beams from the ONI-71 Wave Motion Cannon primary beam (level 3) now deal 14-28 direct damage in PVP (increased from 14-21), and 140-175 direct damage in PVE (increased from 105-175).
++ The smaller beams from the ONI-71 Wave Motion Cannon primary beam (level 3) now deal 70 splash damage on impact (increased from 64).
++ The invisible explosions that follow the smaller beams from the ONI-71 Wave Motion Cannon primary beam (level 3) now deal 49 splash damage when traveling (increased from 48), and 84 splash damage on death (increased from 64).
++ The ONI-71 Wave Motion Cannon secondary main grenade now deals 14-112 direct damage in multiples of 14 (increased from 10-80 in multiples of 10).
++ In PVE, the ONI-71 Wave Motion Cannon secondary tiny grenades now deal 210-280 splash damage if "Marathon: Full Radius Explosions" is disabled, and 210-350 splash damage if "Marathon: Full Radius Explosions" is enabled (increased from a shared 140-280).
 + The Mercury Class Fusion Rifle from Rubicon X has been added as the slot 7S weapon!
+! The Marathon 2/Infinity alien weapon's projectiles now deal 28-42 damage in PVP (changed from 30-38).
+- The Marathon 2/Infinity alien weapon's projectiles now deal 28-42 damage in PVE (decreased from 30-42).
+! The Marathon 1 alien weapon's bullets now deal 7-21 damage (changed from 10-18).
 * Fixed the Talon Ceramic Combat Blade melee puff not having lights.
 * Fixed thrown Talon Ceramic Combat Blades multiplying on hitting specific corners of map geometry in GZDoom/UZDoom.
 
@@ -170,19 +200,20 @@ Ranger (Quake I):
 + Originally a punchdrunk weapon, the gauntlet has been repurposed as the chainsaw from Zerstörer - Testament of the Destroyer, a loadout choice for the slot 1 equipment (samsara_cl_ranger_slot1 1 (client) or samsara_ranger_slot1 2 (server))!
 ! When running out of alternate ammo, weapons will now switch to normal ammo if there is some remaining. Running out of normal ammo will still switch to another weapon, even with alternate ammo remaining.
 ! Splash damage from Ranger's own explosives now thrusts him away further to help with his rocket jumping game.
-+ With improved weapon balance, the grenade launcher's normal grenades now deal 60 direct damage in PVE (increased from 30). The splash damage dealt to enemies with +NORADIUSDMG has also been increased (from 96 to 128).
++ With improved weapon balance, the grenade launcher's normal grenades now deal 60 direct damage in PVE (increased from 30). The splash damage dealt to enemies with +NORADIUSDMG has also been increased (from 96 to 128), and self-damage has been decreased (from 96 to 64).
 - The grenade launcher's cluster main grenade now deals 15 direct damage in PVE (decreased from 20).
 + The grenade launcher's cluster tiny grenades now deal 15 direct damage in PVE (increased from 4).
 * Fixed the nailgun's normal nails not having their intended damage type.
-+ With improved weapon balance, the rocket launcher's normal rockets now deal 48 direct damage in PVE (increased from 44). The splash damage dealt to enemies with +NORADIUSDMG has also been increased (from 96 to 128).
-+ With improved weapon balance, the rocket launcher's multi rockets now deal 24 direct damage in PVE (increased from 22). The splash damage dealt to enemies with +NORADIUSDMG has also been increased (from 48 to 64).
 + The Heavy Weapons Guy's assault cannon from the original Team Fortress mod has been added as the slot 4S weapon!
-+ The thunderbolt (lightning mode) now deals 50 damage (increased from 45 in PVP and 40 in PVE).
++ With improved weapon balance, the rocket launcher's normal rockets now deal 48 direct damage in PVE (increased from 44). The splash damage dealt to enemies with +NORADIUSDMG has also been increased (from 96 to 128), and self-damage has been decreased (from 96 to 64).
++ With improved weapon balance, the rocket launcher's multi rockets now deal 24 direct damage in PVE (increased from 22). The splash damage dealt to enemies with +NORADIUSDMG has also been increased (from 48 to 64), and self-damage has been decreased (from 48 to 32).
++ The thunderbolt (lightning mode) now deals 50 damage in PVP (increased from 45), and 60 damage in PVE (increased from 40).
 + The thunderbolt (plasma mode) now deals 200 direct damage.
-+ The thunderbolt (plasma mode) now deals 600 splash damage across 200 map units (increased from 500 across 150 map units).
++ The thunderbolt (plasma mode) now deals 800 splash damage across 200 map units (increased from 500 across 150 map units).
 - The thunderbolt (plasma mode) now deals 200 self-damage (increased from 150).
 + The thunderbolt (plasma mode)'s lightning bolts now deal 50 damage (increased from 45).
 + The Widowmaker shotgun from Arcane Dimensions has been added as the second unique weapon!
+! Renamed the quad damage's actor names to avoid name conflicts with other mods.
 
 Rise of the Triad:
 
@@ -217,6 +248,7 @@ Strifeguy (Strife):
 * Disintegrated players should no longer be crushed into gibs.
 * Disintegrated enemies should no longer trigger Crash states.
 + The punch dagger and pistol now deal extra damage to Hexen monsters outside of ReMixer (for reference, the DamageFactor amounts from Doomguy's brass knuckles and pistol/rifle, respectively, are used).
+! The pistol and assault gun are now affected by the "Vertical Bullet Spread" settings.
 ! When running out of alternate ammo, weapons will now switch to the previous ammo if there is some remaining. Running out of normal ammo will still switch to another weapon, even with any alternate ammo remaining.
 ! The mini missile launcher, grenade launcher, and Sigil now have +NOAUTOFIRE to prevent accidental self-damage.
 * Fixed some sprite name conflicts with the grenade launcher and mauler.
@@ -232,12 +264,22 @@ Eradicator:
 
 LDF Commando (Rebel Moon Rising):
 
++ The autofiring combat laser now deals 50 damage in PVP (increased from 40), and 70 damage in PVE (increased from 60).
++ The Recoilless ACL 3X Power now deals 50 damage per projectile in PVP (increased from 45).
++ The grenade launcher now deals 120 direct damage (increased from 100).
+- The grenade launcher now deals 80 splash damage (decreased from 100).
++ The grenade launcher now deals its splash damage across 80 map units (increased from 64).
 ! The Subestron arm and DEWY Mark II Plasma Cannon have had their hybrid pickup graphics split to accommodate for the former's new slot placement.
+- The DEWY Mark II Plasma Cannon now deals 500 direct damage in PVE (decreased from 1000).
++ The DEWY Mark II Plasma Cannon's splash damage now applies to enemies with +NORADIUSDMG to make it more effective against bosses. Its splash damage is also now dealt across 128 map units (increased from 64).
 
 Kyle Katarn (Star Wars: Dark Forces):
 
 * The Concussion Rifle's projectile no longer immediately explodes in PVP.
 - The Concussion Rifle's projectile's speed is now 60 in PVP (decreased from 200).
++ The Assault Cannon's primary fire projectile now deals 150 damage (increased from 135).
++ The Assault Cannon's secondary fire projectile now deals 400 direct damage (increased from 300).
++ The Assault Cannon's secondary fire projectile now deals its splash damage across 256 map units (increased from 196).
 
 In Pursuit of Greed:
 
@@ -256,6 +298,7 @@ In Pursuit of Greed:
 ! The IPOG blood splatters are no longer affected by the "Gib Persistence" setting, and now disappear after 150 tics.
 + The other cell phone allies have been implemented.
 * Fixed the ally beacon not having a sprite.
+* ReversoPill armor now properly respects the armor mode and disabled armor cap settings.
 ! A new sound for finding secrets has been added.
 
 Jack Curtis (Disruptor):
@@ -399,6 +442,7 @@ Daniel Garner (Painkiller):
 - The Fury tarot card now only multiplies damage by a factor of 1.5x (decreased from 2x).
 - The Rage tarot card now only multiplies damage by a factor of 3x (decreased from 4x).
 ! The Weapon Modifier tarot card now provides a warning when trying to use it while "Permanent Powered Weapons" is enabled.
+* The Armor Regeneration tarot card now properly respects the armor mode setting.
 * Fixed the demon morph effects persisting on death.
 
 Prisoner 849 (Unreal):
@@ -439,6 +483,7 @@ JC Denton (Deus Ex):
 * Fixed the wrong party mode death particle being called for.
 + Refilling bioelectrical energy can now be done outside of the Augmentations menu. You may bind "use SamsaraDeusExAugmentationBioEnergyCellQuickUse" to a key to do so.
 * The combat knife was dealing more damage than intended. Fixed.
+* The Maintenance augmentation now properly respects the armor mode setting.
 
 Thug (Kingpin):
 
@@ -498,12 +543,24 @@ Hacx: Twitch 'n Kill:
 PSX Doom CE/PSX Final Doom CE:
 
 * Fixed nightmare spectres not having Subtract rendering on ZorchRaise.
+* Fixed revenants not having the Cybernetic DamageFactors.
+
+Doom 64 CE:
+
+* Fixed nightmare imps not having Translucent rendering on ZorchRaise.
+* Fixed nightmare spectres and nightmare cacodemons not having Add rendering on ZorchRaise.
+* Fixed revenants not having the Cybernetic DamageFactors.
+
+The Adventures of Square:
+
+! Renamed one of the health pickup actors.
 
 -Settings-
 
 ! Decimals are no longer shown in the menu options.
 + Skulltag equipment now has pickup sprites for the "Pickup Graphics" option's "Old-Style" mode.
 * Non-unique loadout and altclass equipment now show the proper pickup graphics when the player has them in their inventory while "Pickup Graphics" is set to "Hybrid".
++ In lieu of UZDoom deprecating the "Vertical Bullet Spread" CVars, new CVars have been implemented to take their place (samsara_cl_vertspread (client) and samsara_vertspread (server), with the latter having an extra option to force the vertical spread on). The clientside setting can be found in the "Samsara Clientside Options" menu, under "General Player Preferences", with the label "Vertical Bullet Spread", while the serverside setting can be found in the "Samsara Serverside Options" menu, under "General Options", with the label "Vertical Bullet Spread".
 + samsara_cl_corvus[time/remote/proxy]bomb has been added, which allows players to decide which of Corvus' respective bomb items should be available in the inventory to allow slightly better inventory management. They can be found in the "Samsara Clientside Options" menu, under "Class-Based Player Preferences", with the labels "Heretic: [Time Bomb/Mine/Eye] of the Ancients".
 ! "Half-Life: Freeman HEV Talk" has been renamed to "Half-Life: HEV/PCV Audio". The CVar name itself remains unchanged.
 * The HEV/PCV audio was being stored when "Half-Life: HEV/PCV Audio" is disabled, and then being played when enabling that setting. This should be fixed now.
@@ -530,13 +587,15 @@ PSX Doom CE/PSX Final Doom CE:
 
 ! Added a dummy token that ACS scripts can spawn to check if this mod is loaded (SamsaraReincarnationLoadedToken).
 ! New pickup messages have been added for the megasphere when playing with the Quake and Quake+ armor modes.
+! The pickup messages for most slot 1 equipment have been changed.
 * Unique equipment pickups dropped by the Pinata Party mode no longer respawn.
++ The maximum armor bonus has been added to the Pinata Party mode's rare (extras only) and epic (extras only) loot pools.
 ! Ammo pickups dropped by the Pinata Party mode and custom enemies outside of Samsara can no longer be crushed out of existence.
 ! Player voodoo dolls now have normalized gravity and mass to ensure some map design tricks work as intended.
 * Ice deaths that aren't caused by the hardcoded Ice damage type now properly show the screen blend effect.
 * Ice deaths that are caused by the hardcoded Ice damage type should no longer cause warnings (Zandronum)/errors to console (GZDoom/UZDoom) when a player hits the floor after shattering.
 * Frozen actors should no longer be crushed into gibs or trigger Crash states.
-! With "All Loadout Equipment" enabled, status bar HUDs now show all currently equipped weapons in a slot regardless of loadout setting, in a similar manner to fullscreen HUDs. Unequipped weapons are still shown based on loadout setting when using a weapon from a different slot.
+! With "All Loadout Equipment" enabled, status bar HUDs now show all currently equipped weapons in a slot regardless of loadout setting, in a similar manner to fullscreen HUDs. Unequipped weapons are still shown based on loadout setting (or next usable if the weapon is unavailable) when using a weapon from a different slot.
 ! The headshot and backstab system for certain classes has been reworked from A_Explode to Thing_Damage2.
 * Script calls for Samsara_ResetInventory should now properly handle fallback ranged weapon selection for altclasses in any situation instead of just pistol start.
 

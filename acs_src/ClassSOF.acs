@@ -576,7 +576,7 @@ Script "SoF_DrawBrutalityClient" (int type, int reward, int brutalityCounter, in
 			if(reward)
 			{
 				primaryReward = strparam(s:"\c[SoFHUDRed]",d:multiplier,s:"\c[SoFHUDWhite] - Ammo 1");
-				secondaryReward = multiplier >= 2 ? strParam(s:", \c[SoFHUDRed]",d:multiplier/5,s:"\c[SoFHUDWhite] - Ammo 2") : "";
+				secondaryReward = multiplier >= 5 ? strParam(s:", \c[SoFHUDRed]",d:multiplier/5,s:"\c[SoFHUDWhite] - Ammo 2") : "";
 			}
 			break;
 		case 3:
@@ -597,7 +597,7 @@ Script "SoF_DrawBrutalityClient" (int type, int reward, int brutalityCounter, in
 			if(reward)
 			{
 				primaryReward = strparam(s:"\c[SoFHUDRed]",d:multiplier,s:"\c[SoFHUDWhite] - Armor");
-				secondaryReward = multiplier >= 10 ? strParam(s:", \c[SoFHUDRed]",d:5,s:"\c[SoFHUDWhite] - Ammo 2") : "";
+				secondaryReward = multiplier >= 10 ? strParam(s:", \c[SoFHUDRed]",d:3,s:"\c[SoFHUDWhite] - Ammo 2") : "";
 			}
 			break;
 		case 6:
@@ -650,41 +650,46 @@ Script "SoF_BrutalityRewards" (int type)
 		case 0:
 			GiveInventory("Clip",CheckInventory("SoF_BulletSpongeMultiplier"));
 			if(CheckInventory("SoF_BulletSpongeMultiplier") >= 5)
-				GiveInventory("ArmorScrapArmorNormal",CheckInventory("SoF_BulletSpongeMultiplier")/5);
+				ACS_NamedExecuteWithResult("SamsaraArmorAdjust", ARMOR_BONUS1, -(CheckInventory("SoF_BulletSpongeMultiplier")/5), 0, 2);
 			break;
 		case 1:
-			GiveInventory("HealthBonus",CheckInventory("SoF_LengTcheMultiplier"));
+			if(CheckInventory("SoF_LengTcheMultiplier"))
+				ACS_NamedExecuteWithResult("SamsaraPlayerHealer", CheckInventory("SoF_LengTcheMultiplier"), 200);
 			if(CheckInventory("SoF_LengTcheMultiplier") >= 20)
 				GiveInventory("SoF_Knives",1);
 			break;
 		case 2:
 			GiveInventory("Clip",CheckInventory("SoF_AlexMurphyMultiplier"));
-			if(CheckInventory("SoF_AlexMurphyMultiplier") >= 2)
+			if(CheckInventory("SoF_AlexMurphyMultiplier") >= 5)
 				GiveInventory("Shell",CheckInventory("SoF_AlexMurphyMultiplier")/5);
 			break;
 		case 3:
-			GiveInventory("ArmorScrapArmorNormal",CheckInventory("SoF_TheJuicerMultiplier"));
+			if(CheckInventory("SoF_TheJuicerMultiplier"))
+				ACS_NamedExecuteWithResult("SamsaraArmorAdjust", ARMOR_BONUS1, -CheckInventory("SoF_TheJuicerMultiplier"), 0, 2);
 			if(CheckInventory("SoF_TheJuicerMultiplier")/4)
 				GiveInventory("RocketAmmo",CheckInventory("SoF_TheJuicerMultiplier")/4);
 			break;
 		case 4:
-			GiveInventory("HealthBonus",CheckInventory("SoF_TheEvisceratorMultiplier"));
-			GiveInventory("ArmorScrapArmorNormal",CheckInventory("SoF_TheEvisceratorMultiplier"));
+			if(CheckInventory("SoF_TheEvisceratorMultiplier"))
+				ACS_NamedExecuteWithResult("SamsaraPlayerHealer", CheckInventory("SoF_TheEvisceratorMultiplier"), 200);
+			if(CheckInventory("SoF_TheEvisceratorMultiplier"))
+				ACS_NamedExecuteWithResult("SamsaraArmorAdjust", ARMOR_BONUS1, -CheckInventory("SoF_TheEvisceratorMultiplier"), 0, 2);
 			break;
 		case 5:
-			GiveInventory("ArmorScrapArmorNormal",CheckInventory("SoF_MelonPopperMultiplier"));
+			if(CheckInventory("SoF_MelonPopperMultiplier"))
+				ACS_NamedExecuteWithResult("SamsaraArmorAdjust", ARMOR_BONUS1, -CheckInventory("SoF_MelonPopperMultiplier"), 0, 2);
 			if(CheckInventory("SoF_MelonPopperMultiplier") >= 10)
 				GiveInventory("Shell",3);
 			break;
 		case 6:
 			GiveInventory("Cell",CheckInventory("SoF_TVDinnerMultiplier"));
 			if(CheckInventory("SoF_TVDinnerMultiplier")/4)
-				GiveInventory("HealthBonus",CheckInventory("SoF_TVDinnerMultiplier")/4);
+				ACS_NamedExecuteWithResult("SamsaraPlayerHealer", CheckInventory("SoF_TVDinnerMultiplier") / 4, 200);
 			break;
 		case 7:
 			GiveInventory("Cell",CheckInventory("SoF_RoastedMultiplier"));
-			if(CheckInventory("SoF_RoastedMultiplier")/4)
-				GiveInventory("RocketAmmo",CheckInventory("SoF_TVDinnerMultiplier")/10);
+			if(CheckInventory("SoF_RoastedMultiplier")/10)
+				GiveInventory("RocketAmmo",CheckInventory("SoF_RoastedMultiplier")/10);
 			break;
 	}
 }
@@ -699,6 +704,7 @@ Script "SoF_HandleLean" (void)
 		// Do lean stuff. I gotta do this system earlier than I'd like unfortunately
 		int buttons = GetPlayerInput(-1,INPUT_BUTTONS);
 		int sideMove = GetPlayerInput(-1,INPUT_SIDEMOVE);
+		bool wasfrozen;
 		ChangeActorRoll(0,0.00625*leanCounter,1);
 		if((buttons & BT_USER1 || buttons & BT_USER2) && sideMove != 0 && !isDead(0))
 		{
@@ -706,6 +712,7 @@ Script "SoF_HandleLean" (void)
 			{
 				SetInventory("SoF_Leaning",1);
 				SetPlayerProperty(0,1,PROP_FROZEN);
+				wasfrozen = true;
 				SetActorVelocity(0,0,0,GetActorVelZ(0),0,0);
 				if(leanCounter > -8)
 				{
@@ -717,6 +724,7 @@ Script "SoF_HandleLean" (void)
 			{
 				SetInventory("SoF_Leaning",2);
 				SetPlayerProperty(0,1,PROP_FROZEN);
+				wasfrozen = true;
 				SetActorVelocity(0,0,0,GetActorVelZ(0),0,0);
 				if(leanCounter < 8)
 				{
@@ -753,8 +761,15 @@ Script "SoF_HandleLean" (void)
 					leanCounter--;
 					doLean(-4.0);
 				}
+			} else {
+				if (wasfrozen)
+				{
+					SetPlayerProperty(0,0,PROP_FROZEN);
+					wasfrozen = false;
+				}
+
+				TakeInventory("SoF_FullyLeaned",1);
 			}
-			else { SetPlayerProperty(0,0,PROP_FROZEN); TakeInventory("SoF_FullyLeaned",1); }
 		}
 		
 		if (!isDead(0))
@@ -908,7 +923,7 @@ Script "SoF_Decorate" (int operation, int arg1, int arg2)
 			SetActivator(0,AAPTR_TRACER);
 			if((CheckInventory("SoF_MPG_InflationCounter") < 30) && (ClassifyActor(0) & ACTOR_ALIVE))
 			{
-				if (GetActorProperty(0, APROP_Accuracy) == -1) //if (CheckActorState(0,"SoFMPGLaserExpand",1))
+				if (!CheckFlag(0, "DORMANT") && !CheckFlag(0, "INVULNERABLE") && !CheckFlag(0, "NODAMAGE") && GetActorProperty(0, APROP_Accuracy) == -1) //if (CheckActorState(0,"SoFMPGLaserExpand",1))
 				{
 					SetActorState(0,"SoFMPGLaserExpand",true);
 					SetResultValue(0);
@@ -1138,6 +1153,7 @@ Script "SoF_BulletDamage" (int damage)
 	int monsterWidth = GetActorProperty(0,APROP_Radius)*2;
 	int monsterAngle, vang, angle;
 	int health = GetActorProperty(0,APROP_SpawnHealth);
+	bool isdeathgibber = GetActorClass(0) == "SoF_DeathGibber", issmgdeathgibber = GetActorClass(0) == "SoF_SMGDeathGibber";
 
 	if (health >= 1000)
 	{
@@ -1157,12 +1173,12 @@ Script "SoF_BulletDamage" (int damage)
 				GiveInventory("SoF_PerformedHeadShot",1);
 				GiveInventory("SoF_BloodHeadshotGenerator",1);
 			}
-		
-			SetResultValue(2 * damage * !CheckInventory("SoF_IsDeathGibber"));
+
+			SetResultValue(damage * (1 + (!isdeathgibber && !issmgdeathgibber)));
 		}
 		else
 		{
-			if(GetActorClass(0) == "SoF_DeathGibber")
+			if(isdeathgibber)
 				GiveInventory("SoF_GibberSeverGenerator",1);
 				
 			SetResultValue(damage);
@@ -1192,16 +1208,15 @@ Script "SoF_BulletDamage" (int damage)
 			}
 			//if(StrLeft(GetActorClass(0),4)=="RTCW" && GetCvar("samsara_mixerloaded"))
 				//GiveInventory("RTCW_RemoveHat",1);
-				
-			
-			SetResultValue(2 * damage * !CheckInventory("SoF_IsDeathGibber"));
+
+			SetResultValue(damage * (1 + (!isdeathgibber && !issmgdeathgibber)));
 		}
 		else if(bulletType == 1 || bulletType == 3)
 		{
 			monsterAngle = GetActorAngle(0);
 			vang = VectorAngle(monsterX - bulletX, monsterY - bulletY);
 			angle = vang % 1.0;
-			if(GetActorClass(0) == "SoF_DeathGibber")
+			if(isdeathgibber)
 			{
 				if(random(0,4) == 0) 
 					if(bulletType == 1)
@@ -1220,7 +1235,7 @@ Script "SoF_BulletDamage" (int damage)
 		}
 		else
 		{
-			if(GetActorClass(0) == "SoF_DeathGibber")
+			if(isdeathgibber)
 				GiveInventory("SoF_GibberSeverGenerator",1);
 				
 			SetResultValue(damage);

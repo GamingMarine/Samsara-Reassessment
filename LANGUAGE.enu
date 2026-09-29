@@ -39,7 +39,7 @@ SAMSQUITMSG33 = "Feeling a bit motion sick from piloting\nthe Pyro-GX?"; // Desc
 SAMSQUITMSG34 = "Get back here, this conspiracy\nisn't going to uncover itself!"; // Deus Ex, custom quit message
 SAMSQUITMSG35 = "Hey, come back anytime, huh?\nThanks for shopping Pawn-O-Matic."; // Kingpin, Pawn-O-Matic
 SAMSQUITMSG36 = "(Soldier of Fortune placeholder quit message)"; // Soldier of Fortune
-SAMSQUITMSG37 = "Once a lawman, always a lawman.\nBoys, did I tell you how much I hate lawmen?"; // Outlaws, Sawmill cutscene
+SAMSQUITMSG37 = "(Outlaws placeholder quit message)"; // Outlaws
 
 // OBITUARIES
 // ==========
@@ -758,7 +758,7 @@ SAMSARA_WITCHAVEN_TIP3_2 = " and ";
 SAMSARA_WITCHAVEN_TIP3_3 = ". You can drink that potion by pressing the use inventory key, ";
 SAMSARA_WITCHAVEN_TIP3_4 = ".";
 SAMSARA_HALFLIFE_TIP1 = "The Half-Life class is composed of both Gordon Freeman and Adrian Shephard.";
-SAMSARA_HALFLIFE_TIP2_1 = "Neither of them are easy to play compared to much of the other heroes in Samsara. However, they both can deal bonus damage to enemies when delivering headshots. Both of them do not need a light amplifier, as pressing the primary class key, ";
+SAMSARA_HALFLIFE_TIP2_1 = "Neither of them are easy to play compared to much of the other heroes in Samsara. However, they both can deal bonus damage to weaker enemies when delivering headshots. Both of them do not need a light amplifier, as pressing the primary class key, ";
 SAMSARA_HALFLIFE_TIP2_2 = ", turns on Freeman's flashlight or Shephard's night vision goggles.";
 SAMSARA_HALFLIFE_TIP3_1 = "While Adrian has the barnacle grappling hook, Gordon has the long jump module, which can give him an advantage for traveling maps. Just double tap the jump key, ";
 SAMSARA_HALFLIFE_TIP3_2 = " to use the long jump module. It will only work while moving forward.";
@@ -768,7 +768,7 @@ SAMSARA_SW_TIP2 = "Lo Wang also obtains more Ammo 3 from ammo pickups. Be carefu
 SAMSARA_CYBERMAGE_TIP1_1 = "The CyberMage has Darklight powers he can activate through his fallback melee. You can cycle them by using the secondary/alt attack key, ";
 SAMSARA_CYBERMAGE_TIP1_2 = ".";
 SAMSARA_CYBERMAGE_TIP2 = "The CyberMage also shoots his weapons faster when repeatedly using the attack key.";
-SAMSARA_EXHUMED_TIP1 = "Jon in Samsara Reassessment is a fusion of the Sega Saturn/PSX and PC ports of PowerSlave/Exhumed. Do not expect each weapon to perform like one or the other.";
+SAMSARA_EXHUMED_TIP1 = "Jon in Samsara Reincarnation is a fusion of the Sega Saturn/PSX and PC ports of PowerSlave/Exhumed. Do not expect each weapon to perform like one or the other.";
 SAMSARA_EXHUMED_TIP2 = "Furthermore, Jon can permanently obtain some weapons that he was not able to before.";
 SAMSARA_RR_TIP1_1 = "Leonard is frail like most of his cousins from the Build Engine. Sometimes, he obtains healing items that go in his inventory. Use ";
 SAMSARA_RR_TIP1_2 = " and ";
@@ -788,7 +788,7 @@ SAMSARA_HEXEN2_TIP3_2 = " and ";
 SAMSARA_HEXEN2_TIP3_3 = " to navigate your inventory until you select the Tome of Power. Use ";
 SAMSARA_HEXEN2_TIP3_4 = ". Leveling up can reduce the cooldown for the Tome of Power.";
 SAMSARA_HEXEN2_TIP4 = "Some health pickups are portable for Demoness. Using these items is similar to activating the Tome of Power.";
-SAMSARA_GOLDENEYE_TIP1 = "James Bond can be a tough class to master because of his lower durability. However, he has a few tricks up the sleeve of his tuxedo.";
+SAMSARA_GOLDENEYE_TIP1 = "James Bond can be a tough class to master because of his lower agility. However, he has a few tricks up the sleeve of his tuxedo.";
 SAMSARA_GOLDENEYE_TIP2_1 = "For starters, he can dual wield almost any weapon with the secondary/alt attack key, ";
 SAMSARA_GOLDENEYE_TIP2_2 = ". You must pick up the same weapon again to be able to activate this ability.";
 SAMSARA_GOLDENEYE_TIP3 = "He also deals significant bonus damage to enemies if he shoots them in the head, although tougher enemies will shrug off this additional damage.";
@@ -827,18 +827,18 @@ SAMSARA_DEUSEX_TIP2_3 = " to navigate your augments. Press the use key, ";
 SAMSARA_DEUSEX_TIP2_4 = " to activate the highlighted augment.";
 SAMSARA_DEUSEX_TIP3 = "You cannot use augments forever, so learning how best to use your augments is key. Mastery of Denton's systems will make you almost unstoppable.";
 SAMSARA_DEUSEX_TIP4 = "You can obtain more augments by collecting certain powerups. Ammo Expansion Packs are typically a certain way of getting one. Grand health pickups will also provide energy cells to restore augment energy, which can be applied in Denton's augment menu.";
-SAMSARA_DEUSEX_TIP5 = "Finally, JC Denton can deliver bonus damage through headshots.";
+SAMSARA_DEUSEX_TIP5 = "Finally, JC Denton can deliver bonus damage to weaker enemies through headshots.";
 SAMSARA_KINGPIN_TIP1 = "The Kingpin Thug can pick up cash from enemies to purchase weapon upgrades and other items in the Pawn-O-Matic.";
 SAMSARA_KINGPIN_TIP2_1 = "To bring up the Pawn-O-Matic menu, press the primary class key, ";
 SAMSARA_KINGPIN_TIP2_2 = ". Use the movement keys to select what upgrade or item you want to purchase, then press ";
 SAMSARA_KINGPIN_TIP2_3 = " twice to confirm your choice. To exit the menu, press the primary class key again.";
 SAMSARA_KINGPIN_TIP3 = "Weapon upgrades are vital for dealing with tougher enemies, and getting all of them will make the Thug one of the more powerful classes in the roster.";
-SAMSARA_KINGPIN_TIP4 = "It should also be noted that the Thug can deal additional damage with headshots.";
-SAMSARA_SOF_TIP1_1 = "John Mullins plays more tactically than other classes in Samsara Reassessment. He can lean by pressing the primary class key, ";
+SAMSARA_KINGPIN_TIP4 = "It should also be noted that the Thug can deal additional damage to weaker enemies with headshots.";
+SAMSARA_SOF_TIP1_1 = "John Mullins plays more tactically than other classes in Samsara Reincarnation. He can lean by pressing the primary class key, ";
 SAMSARA_SOF_TIP1_2 = ", along with either the move left or move right key. Leaning allows Mullins to peek around corners undetected, and can be useful for situations that require stealth.";
-SAMSARA_SOF_TIP2 = "Landing headshots will deal more damage, and some weapons can give you a brutality bonus for various things such as excessive damage or gibbing enemies. Note that these bonuses won't be given if brutalities are disabled.";
+SAMSARA_SOF_TIP2 = "Landing headshots will deal more damage to weaker enemies, and some weapons can give you a brutality bonus for various things such as excessive damage or gibbing enemies. Note that these bonuses won't be given if brutalities are disabled.";
 SAMSARA_OUTLAWS_TIP1 = "The weapons in Outlaws are very archaic, dealing more damage than most other classes but they require the reload key to be held down to insert each round into your weapon. It's very important that you reload when you have downtime and aren't surrounded by enemies.";
-SAMSARA_OUTLAWS_TIP2 = "James Anderson can dish out even more damage through headshots and picking up Sheriff's Badges, the latter of which increases attack power and defense for 30 seconds.";
+SAMSARA_OUTLAWS_TIP2 = "James Anderson can dish out even more damage through headshots and picking up Sheriff's Badges, the latter of which increases attack power and defense for 30 seconds. Be mindful that tougher enemies will not take bonus headshot damage.";
 SAMSARA_OUTLAWS_TIP3_1 = "To use the Sheriff's Badge, press ";
 SAMSARA_OUTLAWS_TIP3_2 = " and ";
 SAMSARA_OUTLAWS_TIP3_3 = " to navigate your inventory until you highlight the Badge. Use ";
@@ -849,8 +849,8 @@ SAMSARA_TIP_MOREINFO_PART2 = ". To disable this tutorial for this class, toggle 
 
 // SAMSARA INCOMPATIBILITY MESSAGES
 // ================================
-SAMSARA_INCOMPATIBILITY_GZDOOMMP = "Samsara Reassessment is incompatible with multiplayer in GZDoom/UZDoom. This will cause bugs, glitches, and possible crashes. Please consider using Zandronum for multiplayer instead.";
-SAMSARA_INCOMPATIBILITY_BRUTALDOOM = "Samsara Reassessment is incompatible with Brutal Doom and Project Brutality. This will cause bugs, glitches, and possible crashes. Note that there are settings in the clientside options that replicate the blood and gore seen in Brutal Doom.";
+SAMSARA_INCOMPATIBILITY_GZDOOMMP = "Samsara Reincarnation is incompatible with multiplayer in GZDoom/UZDoom. This will cause bugs, glitches, and possible crashes. Please consider using Zandronum for multiplayer instead.";
+SAMSARA_INCOMPATIBILITY_BRUTALDOOM = "Samsara Reincarnation is incompatible with Brutal Doom and Project Brutality. This will cause bugs, glitches, and possible crashes. Note that there are settings in the clientside options that replicate the blood and gore seen in Brutal Doom.";
 
 // Boss Monologues
 
@@ -1311,11 +1311,9 @@ SECRETFOUND_QUAKE1 = "\ccYou found a secret area!";
 SECRETFOUND_BLOOD_1 = "\ccA secret is revealed.";
 SECRETFOUND_BLOOD_2 = "\ccYou found a secret.";
 SECRETFOUND_STRIFE = "\c[Fire]You found a secret area!\c-";
-SECRETFOUND_CORRIDOR7 = "\cfRestricted Area Entered";
 SECRETFOUND_DARKFORCES = "\c[C5]You found a secret!\c-";
 SECRETFOUND_HALFLIFE = "\c[HEVYellow]Unmarked location detected.\c-";
 SECRETFOUND_HALFLIFEOPFOR = "\c[PCVGreen]Secret room found.\c-";
-SECRETFOUND_SHADOWWARRIOR = "\c[SmallNukemBlue]You found a secret area!\c-";
 SECRETFOUND_GOLDENEYE = "\cjEnemy stash located.\c-";
 SECRETFOUND_REDNECK = "Yer Secret Place!";
 SECRETFOUND_QUAKE2 = "\ccYou found a secret.";
@@ -1347,7 +1345,7 @@ PISTOLSTART_WIT13 = "For that one mapset that needs it.";
 PISTOLSTART_WIT14 = "Doesn't work in Hexen or Strife.";
 PISTOLSTART_WIT15 = "Fun fact: the original Doom was built around Pistol Start.";
 PISTOLSTART_WIT16 = "Now you're on the same playing field as everyone else!";
-PISTOLSTART_WIT17 = "On the bright side, you still get your kills.";
+PISTOLSTART_WIT17 = "On the bright side, you still have your kills.";
 PISTOLSTART_WIT18 = "(All those weapons were making you heavy, anyway.)";
 PISTOLSTART_WIT19 = "I hope you weren't attached to that Slot VII.";
 PISTOLSTART_WIT20 = "But I just got my Slot VII!";
@@ -1357,7 +1355,7 @@ PISTOLSTART_WIT23 = "Don't tell me you were expecting to keep that weapon.";
 PISTOLSTART_WIT24 = "Excellent for speedmaps and joke wads.";
 PISTOLSTART_WIT25 = "Look at it this way: you're not completely defenseless.";
 PISTOLSTART_WIT26 = "So you think you're a Doomgod? Prove it.";
-PISTOLSTART_WIT27 = "Now to upload this on YouTube for your megawad playthough!";
+PISTOLSTART_WIT27 = "Now to upload this on YouTube for your megawad playthrough!";
 PISTOLSTART_WIT28 = "Hopefully, this level doesn't expect you to keep your inventory. Hopefully.";
 PISTOLSTART_WIT29 = "Just like the developers intended.";
 PISTOLSTART_WIT30 = "Because the real fun is having all of your powerful weapons taken from you.";
@@ -1418,7 +1416,7 @@ OB_DEMON2HIT = "%o was maimed by a Serpent.";
 
 // SAMSARA VERSION DISPLAY MESSAGE
 
-SAMSARA_VERSIONDISPLAY = "\cfWelcome to Samsara Reassessment!\c-";
+SAMSARA_VERSIONDISPLAY = "\cfSamsara Reincarnation 3.0 (Development Build)\c-";
 
 // TOGGLE DISPLAY MESSAGES
 
