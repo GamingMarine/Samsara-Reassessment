@@ -39,7 +39,7 @@ SAMSQUITMSG33 = "Feeling a bit motion sick from piloting\nthe Pyro-GX?"; // Desc
 SAMSQUITMSG34 = "Get back here, this conspiracy\nisn't going to uncover itself!"; // Deus Ex, custom quit message
 SAMSQUITMSG35 = "Hey, come back anytime, huh?\nThanks for shopping Pawn-O-Matic."; // Kingpin, Pawn-O-Matic
 SAMSQUITMSG36 = "(Soldier of Fortune placeholder quit message)"; // Soldier of Fortune
-SAMSQUITMSG37 = "(Outlaws placeholder quit message)"; // Outlaws
+SAMSQUITMSG37 = "Once a lawman, always a lawman.\nBoys, did I tell you how much I hate lawmen?"; // Outlaws, Sawmill cutscene
 
 // OBITUARIES
 // ==========
@@ -768,7 +768,7 @@ SAMSARA_SW_TIP2 = "Lo Wang also obtains more Ammo 3 from ammo pickups. Be carefu
 SAMSARA_CYBERMAGE_TIP1_1 = "The CyberMage has Darklight powers he can activate through his fallback melee. You can cycle them by using the secondary/alt attack key, ";
 SAMSARA_CYBERMAGE_TIP1_2 = ".";
 SAMSARA_CYBERMAGE_TIP2 = "The CyberMage also shoots his weapons faster when repeatedly using the attack key.";
-SAMSARA_EXHUMED_TIP1 = "Jon in Samsara Reincarnation is a fusion of the Sega Saturn/PSX and PC ports of PowerSlave/Exhumed. Do not expect each weapon to perform like one or the other.";
+SAMSARA_EXHUMED_TIP1 = "Jon in Samsara Reassessment is a fusion of the Sega Saturn/PSX and PC ports of PowerSlave/Exhumed. Do not expect each weapon to perform like one or the other.";
 SAMSARA_EXHUMED_TIP2 = "Furthermore, Jon can permanently obtain some weapons that he was not able to before.";
 SAMSARA_RR_TIP1_1 = "Leonard is frail like most of his cousins from the Build Engine. Sometimes, he obtains healing items that go in his inventory. Use ";
 SAMSARA_RR_TIP1_2 = " and ";
@@ -834,7 +834,7 @@ SAMSARA_KINGPIN_TIP2_2 = ". Use the movement keys to select what upgrade or item
 SAMSARA_KINGPIN_TIP2_3 = " twice to confirm your choice. To exit the menu, press the primary class key again.";
 SAMSARA_KINGPIN_TIP3 = "Weapon upgrades are vital for dealing with tougher enemies, and getting all of them will make the Thug one of the more powerful classes in the roster.";
 SAMSARA_KINGPIN_TIP4 = "It should also be noted that the Thug can deal additional damage to weaker enemies with headshots.";
-SAMSARA_SOF_TIP1_1 = "John Mullins plays more tactically than other classes in Samsara Reincarnation. He can lean by pressing the primary class key, ";
+SAMSARA_SOF_TIP1_1 = "John Mullins plays more tactically than other classes in Samsara Reassessment. He can lean by pressing the primary class key, ";
 SAMSARA_SOF_TIP1_2 = ", along with either the move left or move right key. Leaning allows Mullins to peek around corners undetected, and can be useful for situations that require stealth.";
 SAMSARA_SOF_TIP2 = "Landing headshots will deal more damage to weaker enemies, and some weapons can give you a brutality bonus for various things such as excessive damage or gibbing enemies. Note that these bonuses won't be given if brutalities are disabled.";
 SAMSARA_OUTLAWS_TIP1 = "The weapons in Outlaws are very archaic, dealing more damage than most other classes but they require the reload key to be held down to insert each round into your weapon. It's very important that you reload when you have downtime and aren't surrounded by enemies.";
@@ -849,8 +849,8 @@ SAMSARA_TIP_MOREINFO_PART2 = ". To disable this tutorial for this class, toggle 
 
 // SAMSARA INCOMPATIBILITY MESSAGES
 // ================================
-SAMSARA_INCOMPATIBILITY_GZDOOMMP = "Samsara Reincarnation is incompatible with multiplayer in GZDoom/UZDoom. This will cause bugs, glitches, and possible crashes. Please consider using Zandronum for multiplayer instead.";
-SAMSARA_INCOMPATIBILITY_BRUTALDOOM = "Samsara Reincarnation is incompatible with Brutal Doom and Project Brutality. This will cause bugs, glitches, and possible crashes. Note that there are settings in the clientside options that replicate the blood and gore seen in Brutal Doom.";
+SAMSARA_INCOMPATIBILITY_GZDOOMMP = "Samsara Reassessment is incompatible with multiplayer in GZDoom/UZDoom. This will cause bugs, glitches, and possible crashes. Please consider using Zandronum for multiplayer instead.";
+SAMSARA_INCOMPATIBILITY_BRUTALDOOM = "Samsara Reassessment is incompatible with Brutal Doom and Project Brutality. This will cause bugs, glitches, and possible crashes. Note that there are settings in the clientside options that replicate the blood and gore seen in Brutal Doom.";
 
 // Boss Monologues
 
@@ -1311,9 +1311,11 @@ SECRETFOUND_QUAKE1 = "\ccYou found a secret area!";
 SECRETFOUND_BLOOD_1 = "\ccA secret is revealed.";
 SECRETFOUND_BLOOD_2 = "\ccYou found a secret.";
 SECRETFOUND_STRIFE = "\c[Fire]You found a secret area!\c-";
+SECRETFOUND_CORRIDOR7 = "\cfRestricted Area Entered";
 SECRETFOUND_DARKFORCES = "\c[C5]You found a secret!\c-";
 SECRETFOUND_HALFLIFE = "\c[HEVYellow]Unmarked location detected.\c-";
 SECRETFOUND_HALFLIFEOPFOR = "\c[PCVGreen]Secret room found.\c-";
+SECRETFOUND_SHADOWWARRIOR = "\c[SmallNukemBlue]You found a secret area!\c-";
 SECRETFOUND_GOLDENEYE = "\cjEnemy stash located.\c-";
 SECRETFOUND_REDNECK = "Yer Secret Place!";
 SECRETFOUND_QUAKE2 = "\ccYou found a secret.";
@@ -1416,7 +1418,7 @@ OB_DEMON2HIT = "%o was maimed by a Serpent.";
 
 // SAMSARA VERSION DISPLAY MESSAGE
 
-SAMSARA_VERSIONDISPLAY = "\cfSamsara Reincarnation 3.0 (Development Build)\c-";
+SAMSARA_VERSIONDISPLAY = "\cfSamsara Reassessment (Based on Reincarnation 3.0 dev)\c-";
 
 // TOGGLE DISPLAY MESSAGES
 
