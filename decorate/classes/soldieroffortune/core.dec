@@ -13,10 +13,10 @@ Actor SoF_Weapon : Weapon
 {
 	Inventory.PickupSound "SoF/Weapons/gpistol/Cock"
 	Inventory.RestrictedTo "JohnMullins"
-    Weapon.BobStyle "Smooth"
-    Weapon.BobSpeed 1.45
+    Weapon.BobStyle "InverseAlpha"
+    Weapon.BobSpeed 0.75
     Weapon.BobRangeX 0.66
-    Weapon.BobRangeY 0.66
+    Weapon.BobRangeY 0.45
 	+AMMO_OPTIONAL
 	+NOALERT
 	+UNDROPPABLE

@@ -8,9 +8,9 @@ actor HacxMajong7_Samsara : SamsaraMonsterRobotic replaces PainElemental
 	height 56
 	painchance 40
 	mass 400
-	seesound "grunt/sight1"
+	seesound "grunt/sight"
 	painsound "pain/pain"
-	deathsound "grunt/death1"
+	deathsound "grunt/death"
 	activesound "skeleton/attack"
     DamageFactor "CorvusCrossbow", 1.1
     DamageFactor "DragonClaw", 1.5

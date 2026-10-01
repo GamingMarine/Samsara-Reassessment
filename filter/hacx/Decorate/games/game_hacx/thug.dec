@@ -9,10 +9,10 @@ actor HacxThug_Samsara : SamsaraMonsterHumanoid replaces Zombieman
 	mass 45
 	speed 13
 	painchance 100
-	seesound "grunt/sight1"
+	seesound "grunt/sight"
 	attacksound "grunt/attack"
 	painsound "grunt/pain"
-	deathsound "grunt/death1"
+	deathsound "grunt/death"
 	activesound "grunt/active"
 	dropitem "Clip2" 256
     DamageFactor "CorvusCrossbow", 1.1

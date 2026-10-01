@@ -10,9 +10,9 @@ actor HacxICE_Samsara : SamsaraMonsterCyberneticTotalGib replaces DoomImp
 	damage 6
 	painchance 10
 	seesound "grunt/sight1"
-	attacksound "grunt/death1"
+	attacksound "grunt/death"
 	painsound "pain/sight"
-	deathsound "grunt/death1"
+	deathsound "grunt/death"
 	activesound "imp/active"
     DamageFactor "CorvusCrossbow", 1.1
     DamageFactor "DragonClaw", 1.5

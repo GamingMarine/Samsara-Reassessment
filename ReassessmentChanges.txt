@@ -1,6 +1,7 @@
 General:
 -Changed the name of the maximum jump height option value to something a little less insensitive.
 -Added a unique Outlaws-themed quit message.
+-Fixed HacX monsters not playing their random sound pools.
 
 For developers:
 -Refactored all cases of folders with differing capitalization, to allow the pk3 builder to work under Linux.
@@ -68,6 +69,8 @@ PowerSlave/Exhumed:
 
 Redneck Rampage
 -Weapons will now viewbob while firing.
+-Secret sounds changed to original game's teleporting/item respawn sound.
+-Leonard's voice clips have been completely overhauled.
 
 Return to Castle Wolfenstein:
 -Weapon viewbobbing has been tweaked.
@@ -76,7 +79,7 @@ Quake III Arena:
 -Weapon viewbobbing has been tweaked.
 
 Solier of Fortune:
--Custom weapon viewbobbing has been added.
+-Weapon viewbobbing has been tweaked.
 
 Outlaws:
 -Weapon viewbobbing has been tweaked.

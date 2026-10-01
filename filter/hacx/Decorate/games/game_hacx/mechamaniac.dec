@@ -10,9 +10,9 @@ actor HacxMechaManiac_Samsara : SamsaraMonsterRobotic replaces HellKnight
 	height 96
 	painchance 40
 	mass 1000
-	seesound "imp/sight1"
+	seesound "imp/sight"
 	painsound "wolfss/death"
-	deathsound "imp/death1"
+	deathsound "imp/death"
 	activesound "keen/death"
     DamageFactor "CorvusCrossbow", 1.15
     DamageFactor "DragonClaw", 1.6

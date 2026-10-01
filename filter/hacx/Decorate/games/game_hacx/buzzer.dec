@@ -9,7 +9,7 @@ actor HacxBuzzer_Samsara : SamsaraMonsterRobotic replaces Demon
 	height 68
 	painchance 100
 	mass 600
-	seesound "imp/sight1"
+	seesound "imp/sight"
 	attacksound "demon/melee"
 	painsound "demon/pain"
 	deathsound "world/barrelx"

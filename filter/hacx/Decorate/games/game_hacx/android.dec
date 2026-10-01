@@ -11,7 +11,7 @@ actor HacxAndroid_Samsara : SamsaraMonsterRobotic replaces ShotgunGuy
 	painchance 20
 	seesound "imp/sight"
 	painsound "wolfss/sight"
-	deathsound "imp/death1"
+	deathsound "imp/death"
 	activesound "keen/pain"
 	dropitem "ShotgunDrop" 256
 	Tag "Android"
