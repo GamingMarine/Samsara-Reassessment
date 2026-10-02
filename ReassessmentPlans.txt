@@ -1,0 +1,94 @@
+This document is a list of things I'd personally like to do in Samsara Reassessment. Moreso just a spitball list, since there's a chance some of these I can't actually implement without sacrificing Zandronum compatibility.
+
+General:
+-Add an option to disable the ally call item.
+-Fix IWAD-based enemy inconsistencies (i.e. FreeDoom trilobites bleeding blue, HacX robots crushing into gibs, etc.).
+
+Wolfenstein 3D:
+-Reanimate the player to be in-line with the original game.
+
+Hexen:
+-Add a unique fullscreen HUD, something like the N64 port.
+-Use extended weapon animations from the remaster when playing with smooth weapons enabled.
+
+Duke Nukem 3D:
+-Reanimate the weapons in TEXTURES.
+-Add a unique fullscreen HUD for the Duke 64 weapon set.
+-Rework the gibs to be closer to the original game.
+-Use Dzierzan's weapon sprites when playing with smooth weapons enabled.
+
+Marathon:
+-Reanimate the knife in the style of the original game.
+-Bob weapons upwards when firing.
+
+Rise of the Triad:
+-Animate the weapons in the style of Return of the Triad when playing with smooth weapons enabled.
+
+Blake Stone:
+-Reanimate the player to be in-line with the original game.
+
+Blood:
+-Add a unique fullscreen HUD.
+-Reanimate the weapons (Namely the pitchfork and voodoo doll) to be closer to the original game.
+-Rework burning enemies to be closer to the original game (and less grating on the ears).
+
+Corridor 7:
+-Add a unique fullscreen HUD.
+-Reanimate the player to be in-line with the original game.
+
+Rebel Moon Rising:
+-Turn the Rebel Moon sounds into a full-fledged weapon set, using a hybrid of sprites from the VLB and 3D Blaster versions.
+
+Star Wars: Dark Forces:
+-Add a unique fullscreen HUD.
+
+In Pursuit of Greed:
+-Add a unique fullscreen HUD.
+-Give the alternate classes their own mugshots.
+
+Disruptor:
+-Add a unique fullscreen HUD.
+
+Witchaven:
+-Redo the widescreen weapon sprites, removing the numerous translucent artifacts (Seriously, did an AI do these or something? They're EVERYWHERE).
+-Reanimate the fists to be closer to the original game.
+
+Half-Life:
+-Add a unique sound for finding a secret as Shepherd.
+-Turn the High-Definition Pack sounds into a full-fledged weapon skin set.
+-Change the player falling sound to the one from Portal (After all, aren't Gordon and Adrian supposed to be mute?).
+-Add unique HEV sounds for picking up Skulltag weapons.
+
+Shadow Warrior:
+-Add a unique fullscreen HUD.
+-Add the Smoke Bomb item as a stand-in for invisibility powerups.
+-Add the idle animation of Lo Wang breaking out chopsticks.
+-Add unique dialogue for flirting with different types of randoms.
+-Reanimate the Ripper Heart in TEXTURES.
+-Add the September 1995 prototype's crossbow as a Slot 5S weapon.
+-Add the September 1995 prototype's gauntlet as a Slot 6S weapon.
+-Add a motion blur effect when using the katana or fists of fury.
+-Rotate the grenade launcher in its select animation.
+-Add the UK version's throwing darts as an equipment loadout option.
+
+CyberMage:
+-Add the sound of the player panting while running.
+
+PowerSlave/Exhumed:
+-Add the DOS version's frag grenades as an equipment loadout option.
+-Reanimate the M-60 to be closer to the source material.
+-Add the first-person death sequences.
+
+Redneck Rampage:
+-Add a unique fullscreen HUD.
+-Reskin the standard HUD to be closer to the original game.
+-Reanimate the dynamite in TEXTURES.
+-Reanimate the weapons (Namely the revolver, crossbow, ranch rifle, ripsaw, and alien arm gun) to be closer to the original game.
+-Add an intro animation for the player spawning in for the first time.
+-Rework the gibs to be closer to the original game.
+
+Descent:
+-Add Descent II's 22k sounds as an alternate sound set.
+
+Outlaws:
+-Give the weapons' muzzle flashes transparency.

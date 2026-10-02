@@ -68,7 +68,7 @@ PowerSlave/Exhumed:
 -Weapon viewbobbing has been tweaked.
 
 Redneck Rampage
--Weapons will now viewbob while firing.
+-(WIP) Weapons will now viewbob while firing.
 -Secret sounds changed to original game's teleporting/item respawn sound.
 -Leonard's voice clips have been completely overhauled.
 
