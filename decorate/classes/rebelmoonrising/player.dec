@@ -1,4 +1,5 @@
 actor RMRClass : Boolean {}
+actor RebelMoon1GunsToken : Boolean {}
 
 Actor RebelMoonCommando : SamsaraPlayerPawnTotalGibRedBlood
 {

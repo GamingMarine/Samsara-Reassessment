@@ -53,6 +53,7 @@ actor SamsaraUniquePickup1 : SamsaraUniquePickup
       EradMarine:       goto Erad
       C7:               7MN2 A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       RMR:              RM8Z H 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
+	  RM1:				goto RMR
       Katarn:           PDFU B 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       POGreed:          PPGU C 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       Disruptor:        SQ72 X 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop

@@ -1352,6 +1352,18 @@ str OriginalHotKeyWeapon[CLASSCOUNT][MAXMODES][ORIGINALCOUNT][ORIGINALCOUNT] =
             { "", "", "", "", "", "", "", "", "", "" },
             { "", "", "", "", "", "", "", "", "", "" },
         },
+		{
+            { "Dirtshark", "", "", "", "", "", "", "", "", "" },
+            { " Laser Pistol ", "", "", "", "", "", "", "", "", "" },
+            { "ACR ADD-ON", "ACR Laser Rifle", "", "", "", "", "", "", "", "" },
+            { "Cyclops Particle Accelerator", "", "", "", "", "", "", "", "", "" },
+            { "RMR Railgun", "", "", "", "", "", "", "", "", "" },
+            { "RMR Grenade Launcher", "", "", "", "", "", "", "", "", "" },
+            { " RMR Plasma Cannon ", "", "", "", "", "", "", "", "", "" },
+            { "Subestron Arm", "", "", "", "", "", "", "", "", "" },
+            { "", "", "", "", "", "", "", "", "", "" },
+            { "", "", "", "", "", "", "", "", "", "" },
+        },
     },
     { //Star Wars: Dark Forces
         {

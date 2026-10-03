@@ -63,6 +63,7 @@ actor SamsaraSlotFourPickup : SamsaraSlotPickup replaces Chaingun
       EradMarine:           goto Erad
       C7:                   7DU2 A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       RMR:                  RM7T E 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
+	  RM1:					goto RMR
       Katarn:               IREP A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       POGreed:              GW40 Z 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       Disruptor:            SQ72 U 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop

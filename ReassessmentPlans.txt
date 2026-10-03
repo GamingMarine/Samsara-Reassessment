@@ -36,9 +36,6 @@ Corridor 7:
 -Add a unique fullscreen HUD.
 -Reanimate the player to be in-line with the original game.
 
-Rebel Moon Rising:
--Turn the Rebel Moon sounds into a full-fledged weapon set, using a hybrid of sprites from the VLB and 3D Blaster versions.
-
 Star Wars: Dark Forces:
 -Add a unique fullscreen HUD.
 
@@ -58,6 +55,9 @@ Half-Life:
 -Turn the High-Definition Pack sounds into a full-fledged weapon skin set.
 -Change the player falling sound to the one from Portal (After all, aren't Gordon and Adrian supposed to be mute?).
 -Add unique HEV sounds for picking up Skulltag weapons.
+-Completely overhaul the ally dialogue to be closer to the source material.
+--Unique dialogue depending on if the player is playing as Gordon, Adrian, or a generic class.
+--Allow security guards to comment on recently killed corpses.
 
 Shadow Warrior:
 -Add a unique fullscreen HUD.

@@ -2,6 +2,7 @@ General:
 -Changed the name of the maximum jump height option value to something a little less insensitive.
 -Added a unique Outlaws-themed quit message.
 -Fixed HacX monsters not playing their random sound pools.
+-Changed the sound for picking up health bonuses.
 
 For developers:
 -Refactored all cases of folders with differing capitalization, to allow the pk3 builder to work under Linux.
@@ -33,6 +34,11 @@ Corridor 7:
 -All weapons have been rescaled and are animated more in-line with the original game.
 -Changed the alien disintegrator's screen flash from red to green.
 -Class now uses non-upscaled sound effects.
+
+Rebel Moon Rising:
+-The Rebel Moon sound set has been turned into a full-fledged alternate class (Note that the "Change alt class" keybind doesn't work with this, so at the moment you'll need to change the setting manually).
+-Weapon viewbobbing has been tweaked.
+-Added a unique message for finding a secret.
 
 Star Wars: Dark Forces:
 -Weapon viewbobbing has been tweaked.

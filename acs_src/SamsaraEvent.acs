@@ -151,7 +151,7 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 	int canbuddha;
 	int armor, oarmor, type, otype;
 	int i;
-	int doommode, dukemode, hexmode, wolfmode, rottmode, blakemode, eradmode, ipogmode, halflifemode, bondmode, cvalue;
+	int doommode, dukemode, hexmode, wolfmode, rottmode, blakemode, eradmode, rmrmode, ipogmode, halflifemode, bondmode, cvalue;
     int previousvalue = -1;
     int extrajumpz;
     int loadoutmode;
@@ -3230,7 +3230,26 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 				break;
 			
 			case CLASS_RMR:
-				SetInventory("SamsaraAlternateSoundToken", GetUserCVar(pln, "samsara_cl_rebelmoonrisingsounds"));
+				rmrmode = GetUserCVar(pln, "samsara_cl_rebelmoonmode");
+
+                if (rmrmode > 1) { rmrmode = 1; }
+                else if (rmrmode < 0) { rmrmode = 0; }
+
+				if(rmrmode != previousvalue)
+				{
+					SetInventory("SamsaraModeCounter",rmrmode);
+					if(rmrmode)
+					{
+						GiveInventory("RebelMoon1GunsToken", 1);
+						ACS_NamedExecuteAlways("SAMSARA_CLIENT_ALTERNATIVECLASS", 0, 1, pln);
+					}
+					else
+					{
+						ACS_NamedExecuteAlways("SAMSARA_CLIENT_ALTERNATIVECLASS", 0, 0, pln);
+						TakeInventory("RebelMoon1GunsToken", 0x7FFFFFFF);
+					}
+					previousvalue = rmrmode;
+				}
 
                 if (!CheckInventory("PowerRMRFlyAbilityHack")) { TakeInventory("PowerRMRFlyAbility", 1); } // hexen
 				break;

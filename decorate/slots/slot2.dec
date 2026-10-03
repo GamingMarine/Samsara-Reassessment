@@ -56,6 +56,7 @@ actor SamsaraSlotTwoPickup : SamsaraSlotPickup replaces Shotgun
       EradMarine:   goto Erad
       C7:           7VL2 A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       RMR:          RM3Z E 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
+	  RM1:			goto RMR
       Katarn:       IRIF A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       POGreed:      GW30 Z 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       Disruptor:    SQ72 R 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop

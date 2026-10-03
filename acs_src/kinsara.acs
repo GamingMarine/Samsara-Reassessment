@@ -218,7 +218,7 @@ script "SecretNotifierDisplay" (int sfound, int stotal) CLIENTSIDE
         Log(l:"SECRETFOUND_CORRIDOR7");
     } else if (CheckInventory("RMRClass")) {
         AmbientSound("RMR/Secret", 127);
-        Log(l:"SECRETFOUND_DEFAULT");
+        Log(l:"SECRETFOUND_REBELMOON");
     } else if (CheckInventory("KatarnClass")) {
         AmbientSound("secretfound/darkforces", 127);
         Log(l:"SECRETFOUND_DARKFORCES");

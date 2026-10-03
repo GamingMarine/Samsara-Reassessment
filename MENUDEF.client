@@ -76,6 +76,7 @@ OptionMenu "SamsaraClientOptions"
     Option "ROTT: H.U.N.T. Team Member", "samsara_cl_rottmode",     "RottChars"
     Option "Blake Stone Weapon Skins",   "samsara_cl_bsaog",        "BlakeSkins"
     Option "Eradicator Character",       "samsara_cl_eradmode",     "EradicatorChars"
+    Option "Rebel Moon Weapons",         "samsara_cl_rebelmoonmode", "RebelMoonClass"
     Option "IPOG: A.V.C. Team Member",   "samsara_cl_ipogmode",     "IPoGChars"
     Option "Half-Life Character",        "samsara_cl_shephardmode", "HLClass"
     Option "GoldenEye 007 Character",    "samsara_cl_bondmode",     "GEClass"
@@ -85,7 +86,6 @@ OptionMenu "SamsaraClientOptions"
     Option "Doom (Stronghold) Sounds",            "samsara_cl_strongholddoomsounds",  "StrongholdDoomSounds"
     Option "Quake I Sounds",                      "samsara_cl_quake1sounds",          "Quake1Sounds"
     Option "Rise of the Triad Sounds",            "samsara_cl_rottsounds",            "ROTTSounds"
-    Option "Rebel Moon Rising Sounds",            "samsara_cl_rebelmoonrisingsounds", "RebelMoonRisingSounds"
     Option "Half-Life Sounds",                    "samsara_cl_halflifesounds",        "HalfLifeSounds"
     Option "Quake II Sounds",                     "samsara_cl_quake2sounds",          "Quake2Sounds"
     Option "GoldenEye 007 Sounds",                "samsara_cl_goldeneyesounds",       "GoldenEyeSounds"
@@ -295,6 +295,12 @@ OptionValue "EradicatorChars"
     3, "Alliance Commando"
 }
 
+OptionValue "RebelMoonClass"
+{
+    0, "Rebel Moon Rising"
+    1, "Rebel Moon"
+}
+
 OptionValue "IPoGChars"
 {
     0, "Aldus Kaden"
@@ -340,12 +346,6 @@ OptionValue "ROTTSounds"
 {
     0, "Original"
     1, "Alternate"
-}
-
-OptionValue "RebelMoonRisingSounds"
-{
-    0, "Rebel Moon Rising"
-    1, "Rebel Moon"
 }
 
 OptionValue "HalfLifeSounds"

@@ -14,23 +14,40 @@ actor "ACR ADD-ON" : SamsaraRMRWeapon
         loop
 
       Ready:
+        TNT1 A 0 A_JumpIfInventory("RebelMoon1GunsToken",1,"ReadyRM")
         RM2X A 1 A_WeaponReady
         loop
+      ReadyRM:
+        RM2X J 1 A_WeaponReady
+        goto Ready
 
       Deselect:
+        TNT1 A 0 A_JumpIfInventory("RebelMoon1GunsToken",1,"DeselectRM")
         TNT1 A 0 A_Lower
         RM2X A 1 A_Lower
         loop
+      DeselectRM:
+        RM2X J 1 A_Lower
+        goto Deselect
 
       Select:
+        TNT1 A 0 A_JumpIfInventory("RebelMoon1GunsToken",1,"SelectRM")
         TNT1 A 0 A_Raise
         RM2X A 1 A_Raise
         loop
+      SelectRM:
+        RM2X J 1 A_Raise
+        goto Select
 
       Fire:
         TNT1 A 0 A_GiveInventory("SamsaraRMRACRAddonAttackHandler")
+        TNT1 A 0 A_JumpIfInventory("RebelMoon1GunsToken",1,"FireRM")
         RM2X D 11 Bright A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
         RM2X B 12 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        goto Ready
+      FireRM:
+        RM2X L 11 Bright A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        RM2X K 12 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
         goto Ready
     }
 }
@@ -49,7 +66,7 @@ actor SamsaraRMRACRAddonAttackHandler : Trigger
 
       // Attack stuff
       PickupAttack:
-        TNT1 A 0 A_JumpIfInventory("SamsaraAlternateSoundToken",1,"PickupAttackRM")
+        TNT1 A 0 A_JumpIfInventory("RebelMoon1GunsToken",1,"PickupAttackRM")
       // Rebel Moon Rising sounds
       PickupAttackRMR:
         TNT1 A 0 A_PlaySound("RMR/ACRSHOT2",CHAN_WEAPON)

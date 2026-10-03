@@ -65,6 +65,7 @@ actor SamsaraSlotSevenPickup : SamsaraSlotPickup replaces BFG9000
       EradMarine:       goto Erad
       C7:               7DN2 A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       RMR:              RM7V E 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
+	  RM1:				goto RMR
       Katarn:           IASS A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       POGreed:          GW70 Z 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       Disruptor:        SQ72 W 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop

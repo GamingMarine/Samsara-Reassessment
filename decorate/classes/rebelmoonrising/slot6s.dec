@@ -14,14 +14,22 @@ actor "Subestron Arm" : SamsaraRMRWeapon
         loop
 
       Deselect:
+        TNT1 A 0 A_JumpIfInventory("RebelMoon1GunsToken",1,"DeselectRM")
         TNT1 A 0 A_Lower
         RM2X E 1 A_Lower
         loop
+      DeselectRM:
+        RM2X E 1 A_Lower
+        goto Deselect
 
       Select:
+        TNT1 A 0 A_JumpIfInventory("RebelMoon1GunsToken",1,"SelectRM")
         TNT1 A 0 A_Raise
         RM2X E 1 A_Raise
         loop
+      SelectRM:
+        RM2X E 1 A_Raise
+        goto Select
 
       Fire:
         TNT1 A 0 A_GiveInventory("SamsaraRMRSubestronArmAttackHandler")
