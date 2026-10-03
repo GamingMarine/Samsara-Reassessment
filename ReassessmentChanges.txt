@@ -66,6 +66,7 @@ PowerSlave/Exhumed:
 -Class now uses non-upscaled sound effects.
 -Fixed several sounds having audible clicks in them.
 -Weapon viewbobbing has been tweaked.
+-Player sprites have been added for crouching and swimming.
 
 Redneck Rampage
 -(WIP) Weapons will now viewbob while firing.
