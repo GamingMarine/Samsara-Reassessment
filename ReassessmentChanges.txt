@@ -43,6 +43,9 @@ Rebel Moon Rising:
 Star Wars: Dark Forces:
 -Weapon viewbobbing has been tweaked.
 
+In Pursuit of Greed/Assassinators:
+-Changed the alternate classes' labels to their nicknames (i.e. Aldus Kaden is Mooman, Tobias Locke is Cyborg, etc.).
+
 Witchaven:
 -Class now uses non-upscaled sound effects.
 -Secret sounds reduced to just a single sound.

@@ -1442,11 +1442,11 @@ script "Samsara_Keybinds_Messages" (int button, int mode, int arg2) CLIENTSIDE
 			break;
 
 		case CLASS_POGREED:
-			if (mode >= 4) { modestring = "Theola Nom"; }
-			else if (mode == 3) { modestring = "Specimen 7"; }
-			else if (mode == 2) { modestring = "Xith"; }
-			else if (mode == 1) { modestring = "Tobias Locke"; }
-			else { modestring = "Aldus Kaden"; }
+			if (mode >= 4) { modestring = "Dominatrix"; }
+			else if (mode == 3) { modestring = "Mutant"; }
+			else if (mode == 2) { modestring = "Lizard Man"; }
+			else if (mode == 1) { modestring = "Cyborg"; }
+			else { modestring = "Mooman"; }
 
 			if (pln == cpln)
 			{

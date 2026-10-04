@@ -303,11 +303,11 @@ OptionValue "RebelMoonClass"
 
 OptionValue "IPoGChars"
 {
-    0, "Aldus Kaden"
-    1, "Tobias Locke"
-    2, "Xith"
-    3, "Specimen 7"
-    4, "Theola Nom"
+    0, "Mooman"
+    1, "Cyborg"
+    2, "Lizard Man"
+    3, "Mutant"
+    4, "Dominatrix"
 }
 
 OptionValue "HLClass"
