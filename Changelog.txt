@@ -191,6 +191,7 @@ Ranger (Quake I):
 
 ! The status bar HUD has been improved and now shows the rocket powered impaler and the laser cannon.
 * Fixed a missing flag for the fullscreen HUD's mugshot.
+! Renamed some sound files to avoid name conflicts with other mods.
 ! Renamed the axe's actor name to avoid name conflicts with other mods.
 * Fixed the axe, Mjolnir (melee), shotgun weapons, super nailgun (normal nails), and laser cannon using an explosive damage type. They should now be treated as ballistic (except for the laser cannon, which is treated as energy).
 * Fixed the Hexen monsters not taking more damage from the axe and single-barreled shotgun.
@@ -237,6 +238,7 @@ Caleb (Blood):
 
 ! The status bar HUD has been improved and now shows Skulltag weapons.
 ! Renamed some actor names to avoid name conflicts with other mods.
+! The revolver now has higher priority over the pitchfork when switching from a weapon that's out of ammo.
 ! The Naturom Demonto sprites have been improved.
 ! A message is now displayed when toggling the Guns Akimbo effect while "Blood: Guns Akimbo Behavior" is set to "Toggle".
 ! The soulsphere (instant use version) now has its own pickup message and sound.
@@ -249,6 +251,8 @@ Strifeguy (Strife):
 ! Strifeguy and humanoid actors affiliated with him can no longer be crushed into gibs during their Disintegrate state.
 * Disintegrated players should no longer be crushed into gibs.
 * Disintegrated enemies should no longer trigger Crash states.
++ Added new dynamic lights to the fire droplets.
+! Added offsets for the PHFIRE dynamic lights.
 + The punch dagger and pistol now deal extra damage to Hexen monsters outside of ReMixer (for reference, the DamageFactor amounts from Doomguy's brass knuckles and pistol/rifle, respectively, are used).
 ! The pistol and assault gun are now affected by the "Vertical Bullet Spread" settings.
 ! When running out of alternate ammo, weapons will now switch to the previous ammo if there is some remaining. Running out of normal ammo will still switch to another weapon, even with any alternate ammo remaining.
